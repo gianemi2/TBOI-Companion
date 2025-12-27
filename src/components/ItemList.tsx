@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
 
 export function ItemList() {
-    const items = itemsData.sort((a, b) => a.tid - b.tid > 0 ? 1 : 0) as Item[]
+    const items = itemsData as Item[]
 
     const [search, setSearch] = useState("")
     const [poolFilter, setPoolFilter] = useState<PoolFilter>("all")
