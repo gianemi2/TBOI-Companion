@@ -3,6 +3,7 @@
 
 import { useMemo, useState } from "react"
 import itemsData from "@/data/items.json"
+import trinketsData from "@/data/trinkets.json"
 import type { Item } from "@/types/item"
 import { ItemCard } from "./ItemCard"
 import { ItemDialog } from "./ItemDialog"
@@ -15,6 +16,7 @@ import { X } from "lucide-react"
 
 export function ItemList() {
     const items = itemsData as Item[]
+    const trinkets = trinketsData as Item[]
 
     const [search, setSearch] = useState("")
     const [poolFilter, setPoolFilter] = useState<PoolFilter>("all")
@@ -23,6 +25,11 @@ export function ItemList() {
     const filteredItems = useMemo(
         () => filterItems(items, search, poolFilter),
         [items, search, poolFilter]
+    )
+
+    const filteredTrinkets = useMemo(
+        () => filterItems(trinkets, search, poolFilter),
+        [items, search]
     )
 
     const hasFilters = search.length > 0 || poolFilter !== "all"
@@ -60,14 +67,30 @@ export function ItemList() {
                     )}
                 </div>
 
-                <div className="flex flex-wrap">
-                    {filteredItems.map(item => (
-                        <ItemCard
-                            key={item.index}
-                            item={item}
-                            onClick={() => setSelectedItem(item)}
-                        />
-                    ))}
+                <div className="flex flex-col gap-4">
+                    <h2 className="text-2xl font-bold">Items</h2>
+                    <div className="flex flex-wrap">
+                        {filteredItems.map(item => (
+                            <ItemCard
+                                key={item.index}
+                                item={item}
+                                onClick={() => setSelectedItem(item)}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="flex flex-col gap-4">
+                    <h2 className="text-2xl font-bold">Trinkets</h2>
+                    <div className="flex flex-wrap">
+                        {filteredTrinkets.map(item => (
+                            <ItemCard
+                                key={item.index}
+                                item={item}
+                                onClick={() => setSelectedItem(item)}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
 

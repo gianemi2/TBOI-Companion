@@ -6,11 +6,11 @@ export interface Item {
     sid: number
     title: string
     subtitle: string
-    quality: number
-    unlock: string
+    quality: number | boolean
+    unlock: string | boolean
     description: string
-    type: string
-    recharge: string
-    pool: string
+    type: string | boolean
+    recharge: string | boolean
+    pool: string | boolean
     bg?: string
 }
