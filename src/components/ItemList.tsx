@@ -16,7 +16,7 @@ import { X } from "lucide-react"
 
 export function ItemList() {
     const items = itemsData as Item[]
-    const trinkets = trinketsData as Item[]
+    const trinkets = trinketsData as any[]
 
     const [search, setSearch] = useState("")
     const [poolFilter, setPoolFilter] = useState<PoolFilter>("all")
