@@ -4,6 +4,8 @@ export const POOL_FILTERS = [
     "Angel Room",
     "Shop",
     "Item Room",
+    "Chest",
+    "Challenge"
 ] as const
 
 export type PoolFilter = (typeof POOL_FILTERS)[number] | "all"
