@@ -6,6 +6,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog"
+import { Star } from "lucide-react"
 
 interface Props {
     item: Item | null
@@ -29,6 +30,13 @@ export function ItemDialog({ item, onClose }: Props) {
                                     }}
                                 />
                                 {item.title}
+                                {
+                                    item.quality !== undefined && (
+                                        <div className="flex gap-1 items-center">
+                                            {[1, 2, 3, 4].map((i) => item.quality! >= i ? <Star className="text-yellow-300 fill-yellow-300 h-4 w-4" /> : <Star className=" h-4 w-4" />)}
+                                        </div>
+                                    )
+                                }
                             </DialogTitle>
                         </DialogHeader>
 
