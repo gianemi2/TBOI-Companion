@@ -6,7 +6,7 @@ export interface Item {
     sid: number
     title: string
     subtitle: string
-    quality?: number
+    quality?: number | boolean
     unlock: string
     description: string
     type: string

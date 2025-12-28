@@ -31,9 +31,9 @@ export function ItemDialog({ item, onClose }: Props) {
                                 />
                                 {item.title}
                                 {
-                                    item.quality !== undefined && (
+                                    (item.quality !== undefined && typeof item.quality !== "boolean") && (
                                         <div className="flex gap-1 items-center">
-                                            {[1, 2, 3, 4].map((i) => item.quality! >= i ? <Star className="text-yellow-300 fill-yellow-300 h-4 w-4" /> : <Star className=" h-4 w-4" />)}
+                                            {[1, 2, 3, 4].map((i) => (item.quality !== undefined && typeof item.quality !== "boolean" && item.quality! >= i) ? <Star className="text-yellow-300 fill-yellow-300 h-4 w-4" /> : <Star className=" h-4 w-4" />)}
                                         </div>
                                     )
                                 }
@@ -47,12 +47,16 @@ export function ItemDialog({ item, onClose }: Props) {
 
                             <p>{item.description}</p>
 
-                            <div className="pt-2 border-t text-xs text-muted-foreground">
-                                <p>{item.type}</p>
-                                <p>{item.recharge}</p>
-                                <p>{item.pool}</p>
-                                <p>{item.unlock}</p>
-                            </div>
+                            {
+                                (item.type || item.recharge || item.pool || item.unlock) && (
+                                    <div className="pt-2 border-t text-xs text-muted-foreground">
+                                        {item.type && <p>{item.type}</p>}
+                                        {item.recharge && <p>{item.recharge}</p>}
+                                        {item.pool && <p>{item.pool}</p>}
+                                        {item.unlock && <p className="mt-4">{item.unlock}</p>}
+                                    </div>
+                                )
+                            }
                         </div>
                     </>
                 )}

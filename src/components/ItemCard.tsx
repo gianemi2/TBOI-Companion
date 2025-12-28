@@ -16,7 +16,7 @@ export const ItemCard = React.memo(({ item, onClick }: Props) => {
             {/* Sprite */}
 
             <div
-                className="w-8 h-8 shrink-0 bg-no-repeat"
+                className="w-8 h-8 shrink-0 bg-no-repeat bg-contain"
                 style={{
                     backgroundImage: `${item.bg ? item.bg : "url(/isaac.png)"}`,
                     backgroundPosition: `${item.bg ? "" : `-${item.index * 32}px 0px`}`,

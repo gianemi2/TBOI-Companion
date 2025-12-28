@@ -4,6 +4,7 @@
 import { useMemo, useState } from "react"
 import itemsData from "@/data/items.json"
 import trinketsData from "@/data/trinkets.json"
+import consumablesData from "@/data/consumables.json"
 import type { Item } from "@/types/item"
 import { ItemCard } from "./ItemCard"
 import { ItemDialog } from "./ItemDialog"
@@ -17,6 +18,7 @@ import { X } from "lucide-react"
 export function ItemList() {
     const items = itemsData as Item[]
     const trinkets = trinketsData as any[]
+    const consumables = consumablesData as any[]
 
     const [search, setSearch] = useState("")
     const [poolFilter, setPoolFilter] = useState<PoolFilter>("all")
@@ -29,6 +31,11 @@ export function ItemList() {
 
     const filteredTrinkets = useMemo(
         () => filterItems(trinkets, search, poolFilter),
+        [items, search]
+    )
+
+    const filteredConsumables = useMemo(
+        () => filterItems(consumables, search, poolFilter),
         [items, search]
     )
 
@@ -92,6 +99,21 @@ export function ItemList() {
                         ))}
                     </div>
                 </div>
+
+                {
+                    <div className="flex flex-col gap-4">
+                        <h2 className="text-2xl font-bold">Consumables</h2>
+                        <div className="flex flex-wrap">
+                            {filteredConsumables.map(item => (
+                                <ItemCard
+                                    key={item.index}
+                                    item={item}
+                                    onClick={() => setSelectedItem(item)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                }
             </div>
 
             <ItemDialog
