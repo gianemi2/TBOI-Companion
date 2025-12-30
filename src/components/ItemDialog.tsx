@@ -7,6 +7,7 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog"
 import { Star } from "lucide-react"
+import { Button } from "./ui/button"
 
 interface Props {
     item: Item | null
@@ -47,16 +48,25 @@ export function ItemDialog({ item, onClose }: Props) {
 
                             <p>{item.description}</p>
 
-                            {
-                                (item.type || item.recharge || item.pool || item.unlock) && (
-                                    <div className="pt-2 border-t text-xs text-muted-foreground">
-                                        {item.type && <p>{item.type}</p>}
-                                        {item.recharge && <p>{item.recharge}</p>}
-                                        {item.pool && <p>{item.pool}</p>}
-                                        {item.unlock && <p className="mt-4">{item.unlock}</p>}
-                                    </div>
-                                )
-                            }
+                            <div className="flex gap-3 justify-between items-start border-t pt-2">
+                                {
+                                    (item.type || item.recharge || item.pool) && (
+                                        <div className="text-xs text-muted-foreground">
+                                            {item.type && <p>{item.type}</p>}
+                                            {item.recharge && <p>{item.recharge}</p>}
+                                            {item.pool && <p>{item.pool}</p>}
+                                        </div>
+                                    )
+                                }
+
+                                <Button variant="outline" asChild>
+                                    <a target="_blank" href={`https://bindingofisaacrebirth.fandom.com/wiki/${item.title.trimStart().replaceAll(' ', '_')}`}>Vedi wiki</a>
+                                </Button>
+                            </div>
+
+
+                            {item.unlock && <p className="mt-4 text-xs text-muted-foreground">{item.unlock}</p>}
+
                         </div>
                     </>
                 )}
