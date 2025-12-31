@@ -5,7 +5,9 @@ export const POOL_FILTERS = [
     "Shop",
     "Item Room",
     "Chest",
-    "Challenge"
+    "Challenge",
+    "Boss Room",
+    "Beggar"
 ] as const
 
 export type PoolFilter = (typeof POOL_FILTERS)[number] | "all"

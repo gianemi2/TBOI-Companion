@@ -10,8 +10,8 @@
         "unlock": false,
         "description": "While held, gives you an orbital that blocks enemy shots and deals contact damage equal to 3.5 per tick.\nWhile the active key is held down, Isaac gains +0.5 Speed and all of your orbitals spin faster and deal more damage.\nOrbital damage is equal to 1.5 x OrbitalDamage + 6 while this effect is active",
         "type": "Type: Active & Passive, Familiar",
-        "recharge": "Item Pool: Item Room",
-        "pool": false
+        "recharge": "Recharge Time: 3 seconds",
+        "pool": "Item Pool: Item Room"
     },
     {
         "index": 254,
