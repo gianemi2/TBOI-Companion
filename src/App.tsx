@@ -7,6 +7,10 @@ import { fetchItems } from "@/lib/fetchItems"
 import { Routes, Route, Link } from "react-router-dom"
 import MilestonesPage from "./pages/MilestonePage"
 import HomePage from "./pages/HomePage"
+import { ButtonGroup } from "./components/ui/button-group"
+import { Button } from "./components/ui/button"
+import { cn } from "./lib/utils"
+import { Milestone, ShoppingBag } from "lucide-react"
 
 
 function preloadImages() {
@@ -17,8 +21,15 @@ function preloadImages() {
     })
 }
 
+const PAGES = [
+    "items", "milestones"
+] as const;
+
+type Page = (typeof PAGES)[number]
+
 export default function Page() {
     const [loading, setLoading] = useState(true)
+    const [activePage, setActivePage] = useState<Page>("items")
 
     useEffect(() => {
         const load = async () => {
@@ -43,21 +54,26 @@ export default function Page() {
     }
 
     return (
-        <div className="bg-[#272727] min-h-screen">
-            <nav className="flex gap-4 border-b border-border p-4">
-                <Link to="/" className="font-medium hover:underline">
-                    Items
-                </Link>
+        <div className="bg-[#272727] min-h-screen pb-12">
 
-                <Link to="/milestones" className="font-medium hover:underline">
-                    Milestones
-                </Link>
-            </nav>
+            <ButtonGroup className=" fixed bottom-2 mx-auto left-0 right-0 z-50 rounded-lg">
+                {
+                    PAGES.map(page => (
+                        <Button
+                            className={`transition-all gap-2 py-3 capitalize ${page === activePage ? 'bg-zinc-700' : 'bg-zinc-600'}`}
+                            variant="secondary"
+                            onClick={() => setActivePage(page)}
+                        >
+                            {page === "items" ? <ShoppingBag /> : <Milestone />}
+                            {page}
+                        </Button>
+                    ))
+                }
+            </ButtonGroup>
 
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/milestones" element={<MilestonesPage />} />
-            </Routes>
+            {
+                activePage === "items" ? <Items /> : <MilestonesPage />
+            }
         </div>
     )
 }

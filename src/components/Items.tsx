@@ -17,7 +17,7 @@ import { getCachedItems } from "@/lib/fetchItems"
 export function Items() {
 
     const data = getCachedItems();
-    console.log(data);
+
     if (!data)
         return;
 
