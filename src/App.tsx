@@ -4,6 +4,9 @@ import { Items } from "@/components/Items"
 import { useEffect, useState } from "react"
 import { LoadingScreen } from "./components/LoadingScreen"
 import { fetchItems } from "@/lib/fetchItems"
+import { Routes, Route, Link } from "react-router-dom"
+import MilestonesPage from "./pages/MilestonePage"
+import HomePage from "./pages/HomePage"
 
 
 function preloadImages() {
@@ -41,7 +44,22 @@ export default function Page() {
 
     return (
         <div className="bg-[#272727] min-h-screen">
-            <Items />
+            <nav className="flex gap-4 border-b border-border p-4">
+                <Link to="/" className="font-medium hover:underline">
+                    Items
+                </Link>
+
+                <Link to="/milestones" className="font-medium hover:underline">
+                    Milestones
+                </Link>
+            </nav>
+
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/milestones" element={<MilestonesPage />} />
+            </Routes>
         </div>
     )
 }
+
+
