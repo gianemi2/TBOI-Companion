@@ -43,7 +43,7 @@ export function MilestoneChecklist({ sections }: Props) {
                         {section.milestoneTitle}
                     </h2>
 
-                    <div className="grid grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {section.milestones.map(m => {
                             const id = `${section.milestoneTitle}-${m.title}`
                             const isDone = completed[id]
