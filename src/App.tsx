@@ -4,12 +4,9 @@ import { Items } from "@/components/Items"
 import { useEffect, useState } from "react"
 import { LoadingScreen } from "./components/LoadingScreen"
 import { fetchItems } from "@/lib/fetchItems"
-import { Routes, Route, Link } from "react-router-dom"
 import MilestonesPage from "./pages/MilestonePage"
-import HomePage from "./pages/HomePage"
 import { ButtonGroup } from "./components/ui/button-group"
 import { Button } from "./components/ui/button"
-import { cn } from "./lib/utils"
 import { Milestone, ShoppingBag } from "lucide-react"
 
 
@@ -55,7 +52,15 @@ export default function Page() {
 
     return (
         <div className="bg-[#272727] min-h-screen pb-12">
-
+            <div
+                style={{
+                    backgroundImage: "url(/isaac.png)",
+                    width: 0,
+                    height: 0,
+                    position: "fixed",
+                    opacity: 0
+                }}
+            />
             <ButtonGroup className=" fixed bottom-2 mx-auto left-0 right-0 z-50 rounded-lg">
                 {
                     PAGES.map(page => (
@@ -71,9 +76,8 @@ export default function Page() {
                 }
             </ButtonGroup>
 
-            {
-                activePage === "items" ? <Items /> : <MilestonesPage />
-            }
+            <div className={activePage === "items" ? "block" : "hidden"}><Items /></div>
+            <div className={activePage === "milestones" ? "block" : "hidden"}><MilestonesPage /></div>
         </div>
     )
 }

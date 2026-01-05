@@ -20,7 +20,8 @@ export const ItemCard = React.memo(({ item, onClick }: Props) => {
                 style={{
                     backgroundImage: `${item.bg ? item.bg : "url(/isaac.png)"}`,
                     backgroundPosition: `${item.bg ? "" : `-${item.index * 32}px 0px`}`,
-                    backgroundSize: `${item.bg ? "" : "38688px 32px"}`
+                    backgroundSize: `${item.bg ? "" : "38688px 32px"}`,
+                    willChange: "transform" // 👈 aiuta Safari
                 }}
             />
             {/* 

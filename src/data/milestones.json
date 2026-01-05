@@ -1,6 +1,7 @@
 [
   {
     "milestoneTitle": "Runes",
+    "bad": false,
     "milestones": [
       {
         "title": "Jera",
@@ -41,6 +42,7 @@
   },
   {
     "milestoneTitle": "The Good Ones (Part 1)",
+    "bad": false,
     "milestones": [
       {
         "title": "Broken Modem",
@@ -171,6 +173,7 @@
   },
   {
     "milestoneTitle": "The Good Ones (Part 2)",
+    "bad": false,
     "milestones": [
       {
         "title": "Strange Door & Jacob & Esau",
@@ -296,6 +299,7 @@
   },
   {
     "milestoneTitle": "The Good Ones (Part 3)",
+    "bad": false,
     "milestones": [
       {
         "title": "The D20",
@@ -411,6 +415,7 @@
   },
   {
     "milestoneTitle": "The Bad Ones (Part 1)",
+    "bad": true,
     "milestones": [
       {
         "title": "Missing No.",
@@ -521,6 +526,7 @@
   },
   {
     "milestoneTitle": "The Bad Ones (Part 2)",
+    "bad": true,
     "milestones": [
       {
         "title": "Rotten Beggar",

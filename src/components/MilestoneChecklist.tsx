@@ -71,9 +71,13 @@ export function MilestoneChecklist({ sections }: Props) {
                                             {m.unlock}
                                         </div>
 
-                                        <p className="mt-1 text-sm text-muted-foreground">
-                                            {m.description}
-                                        </p>
+                                        {
+                                            section.bad === false && (
+                                                <p className="mt-1 text-sm text-muted-foreground">
+                                                    {m.description}
+                                                </p>
+                                            )
+                                        }
                                     </div>
                                 </div>
                             )
