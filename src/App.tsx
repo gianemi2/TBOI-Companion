@@ -76,8 +76,7 @@ export default function Page() {
                 }
             </ButtonGroup>
 
-            <div className={activePage === "items" ? "block" : "hidden"}><Items /></div>
-            <div className={activePage === "milestones" ? "block" : "hidden"}><MilestonesPage /></div>
+            {activePage === "items" ? <Items /> : <MilestonesPage />}
         </div>
     )
 }
