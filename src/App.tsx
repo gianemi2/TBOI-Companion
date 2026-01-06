@@ -13,7 +13,7 @@ import { Milestone, ShoppingBag } from "lucide-react"
 function preloadImages() {
     return new Promise<void>((resolve) => {
         const img = new Image()
-        img.src = "/isaac.png"
+        img.src = "/isaac.jpg"
         img.onload = () => resolve()
     })
 }
@@ -54,7 +54,7 @@ export default function Page() {
         <div className="bg-[#272727] min-h-screen pb-12">
             <div
                 style={{
-                    backgroundImage: "url(/isaac.png)",
+                    backgroundImage: "url(/isaac.jpg)",
                     width: 0,
                     height: 0,
                     position: "fixed",

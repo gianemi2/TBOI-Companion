@@ -25,7 +25,7 @@ export function ItemDialog({ item, onClose }: Props) {
                                 <div
                                     className="w-8 h-8 bg-no-repeat scale-200"
                                     style={{
-                                        backgroundImage: `${item.bg ? item.bg : "url(/isaac.png)"}`,
+                                        backgroundImage: `${item.bg ? item.bg : "url(/isaac.jpg)"}`,
                                         backgroundPosition: `${item.bg ? "" : `-${item.index * 32}px 0px`}`,
                                         backgroundSize: `${item.bg ? "" : "38688px 32px"}`
                                     }}
