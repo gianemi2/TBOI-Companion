@@ -48,6 +48,7 @@ export function Items() {
     const hasFilters = search.length > 0 || poolFilter !== "all"
 
     const resetFilters = () => {
+        setSearchInput("")
         setSearch("")
         setPoolFilter("all")
     }
