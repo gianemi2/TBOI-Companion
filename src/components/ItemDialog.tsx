@@ -11,12 +11,12 @@ import { Button } from "./ui/button"
 
 interface Props {
     item: Item | null
-    onClose: () => void
+    onClose: (item: Item | null) => void
 }
 
 export function ItemDialog({ item, onClose }: Props) {
     return (
-        <Dialog open={!!item} onOpenChange={onClose}>
+        <Dialog open={!!item} onOpenChange={() => onClose(null)}>
             <DialogContent className="max-w-lg">
                 {item && (
                     <>
