@@ -58,7 +58,7 @@ export function Items() {
                 <div className="flex flex-wrap gap-2 items-center sticky top-0 bg-[#0D0A09] z-10 -m-4 mb-4 p-4">
                     <Input
                         placeholder="Cerca ovunque..."
-                        value={search}
+                        value={searchInput}
                         onChange={e => setSearchInput(e.target.value)}
                         className="max-w-xs"
                     />
