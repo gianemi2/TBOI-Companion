@@ -21,7 +21,7 @@ export function PoolSelect({ value, onChange }: Props) {
                 <SelectValue placeholder="Filtra per pool" />
             </SelectTrigger>
 
-            <SelectContent className="bg-[#121418]">
+            <SelectContent avoidCollisions={false} position="popper" side="bottom" className="bg-[#121418]">
                 <SelectItem value="all">Tutte</SelectItem>
                 {POOL_FILTERS.map(pool => (
                     <SelectItem key={pool} value={pool}>
