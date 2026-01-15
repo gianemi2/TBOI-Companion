@@ -1,5 +1,6 @@
 import { Checkbox } from "@/components/ui/checkbox"
 import { useLocalStorage } from "@/hooks/useLocalStorage"
+import { getCachedItems } from "@/lib/fetchItems"
 import type { MilestoneSection } from "@/types/milestones"
 
 interface Props {
@@ -16,6 +17,13 @@ export function MilestoneChecklist({ sections }: Props) {
         "show-completed",
         true
     )
+
+    const data = getCachedItems();
+
+    if (!data)
+        return;
+
+    const { items } = data;
 
     function toggle(id: string) {
         setCompleted(prev => ({
