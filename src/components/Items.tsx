@@ -1,7 +1,7 @@
 // components/ItemList.tsx
 "use client"
 
-import { useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 import type { Item } from "@/types/item"
 import { ItemCard } from "./ItemCard"
 import { ItemDialog } from "./ItemDialog"
@@ -16,35 +16,39 @@ import { getCachedItems } from "@/lib/fetchItems"
 
 export function Items() {
 
-    const data = getCachedItems();
+    const [data] = useState(() => getCachedItems());
 
     if (!data)
         return;
 
     const { items, trinkets, consumables } = data;
 
+    const [searchInput, setSearchInput] = useState("")
     const [search, setSearch] = useState("")
     const [poolFilter, setPoolFilter] = useState<PoolFilter>("all")
     const [selectedItem, setSelectedItem] = useState<Item | null>(null)
 
-    const filteredItems = useMemo(
-        () => filterItems(items, search, poolFilter, "items"),
-        [items, search, poolFilter]
-    )
+    useEffect(() => {
+        const t = setTimeout(() => setSearch(searchInput), 150);
+        return () => clearTimeout(t);
+    }, [searchInput]);
 
-    const filteredTrinkets = useMemo(
-        () => filterItems(trinkets, search, poolFilter, "trinkets"),
-        [items, search]
-    )
+    const filtered = useMemo(() => {
+        return {
+            items: filterItems(items, search, poolFilter, "items"),
+            trinkets: filterItems(trinkets, search, poolFilter, "trinkets"),
+            consumables: filterItems(consumables, search, poolFilter, "consumables"),
+        };
+    }, [items, trinkets, consumables, search, poolFilter]);
 
-    const filteredConsumables = useMemo(
-        () => filterItems(consumables, search, poolFilter, "consumables"),
-        [items, search]
-    )
+    const handleSelectItem = useCallback((item: Item | null) => {
+        setSelectedItem(item);
+    }, []);
 
     const hasFilters = search.length > 0 || poolFilter !== "all"
 
     const resetFilters = () => {
+        setSearchInput("")
         setSearch("")
         setPoolFilter("all")
     }
@@ -55,8 +59,8 @@ export function Items() {
                 <div className="flex flex-wrap gap-2 items-center sticky top-0 bg-[#0D0A09] z-10 -m-4 mb-4 p-4">
                     <Input
                         placeholder="Cerca ovunque..."
-                        value={search}
-                        onChange={e => setSearch(e.target.value)}
+                        value={searchInput}
+                        onChange={e => setSearchInput(e.target.value)}
                         className="max-w-xs"
                     />
 
@@ -78,27 +82,27 @@ export function Items() {
                 </div>
 
                 <ItemList
-                    items={filteredItems}
+                    items={filtered.items}
                     title="Items"
-                    onSelectItem={(item) => setSelectedItem(item)}
+                    onSelectItem={handleSelectItem}
                 />
 
                 <ItemList
-                    items={filteredTrinkets}
+                    items={filtered.trinkets}
                     title="Trinkets"
-                    onSelectItem={(item) => setSelectedItem(item)}
+                    onSelectItem={handleSelectItem}
                 />
 
                 <ItemList
-                    items={filteredConsumables}
+                    items={filtered.consumables}
                     title="Consumables"
-                    onSelectItem={(item) => setSelectedItem(item)}
+                    onSelectItem={handleSelectItem}
                 />
             </div>
 
             <ItemDialog
                 item={selectedItem}
-                onClose={() => setSelectedItem(null)}
+                onClose={handleSelectItem}
             />
         </>
     )

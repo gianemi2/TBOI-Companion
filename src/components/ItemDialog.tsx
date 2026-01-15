@@ -11,12 +11,12 @@ import { Button } from "./ui/button"
 
 interface Props {
     item: Item | null
-    onClose: () => void
+    onClose: (item: Item | null) => void
 }
 
 export function ItemDialog({ item, onClose }: Props) {
     return (
-        <Dialog open={!!item} onOpenChange={onClose}>
+        <Dialog open={!!item} onOpenChange={() => onClose(null)}>
             <DialogContent className="max-w-lg">
                 {item && (
                     <>
@@ -25,7 +25,7 @@ export function ItemDialog({ item, onClose }: Props) {
                                 <div
                                     className="w-8 h-8 bg-no-repeat scale-200"
                                     style={{
-                                        backgroundImage: `${item.bg ? item.bg : "url(/isaac.png)"}`,
+                                        backgroundImage: `${item.bg ? item.bg : "url(/isaac.jpg)"}`,
                                         backgroundPosition: `${item.bg ? "" : `-${item.index * 32}px 0px`}`,
                                         backgroundSize: `${item.bg ? "" : "38688px 32px"}`
                                     }}
