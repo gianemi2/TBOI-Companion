@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
 import { ItemList } from "./ItemList"
 import { getCachedItems } from "@/lib/fetchItems"
+import { cn } from "@/lib/utils"
 
 export function Items() {
 
@@ -56,12 +57,12 @@ export function Items() {
     return (
         <>
             <div className="p-4 space-y-4">
-                <div className="flex flex-wrap gap-2 items-center sticky top-0 bg-[#0D0A09] z-10 -m-4 mb-4 p-4">
+                <div className="flex gap-2 items-center sticky top-0 bg-[#0D0A09] z-10 -m-4 mb-4 p-4">
                     <Input
                         placeholder="Cerca ovunque..."
                         value={searchInput}
                         onChange={e => setSearchInput(e.target.value)}
-                        className="max-w-xs"
+                        className="w-auto"
                     />
 
                     <PoolSelect
@@ -69,16 +70,15 @@ export function Items() {
                         onChange={setPoolFilter}
                     />
 
-                    {hasFilters && (
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={resetFilters}
-                            title="Reset filtri"
-                        >
-                            <X className="w-4 h-4" />
-                        </Button>
-                    )}
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={resetFilters}
+                        title="Reset filtri"
+                        className={cn(!hasFilters && "opacity-0")}
+                    >
+                        <X className="w-4 h-4" />
+                    </Button>
                 </div>
 
                 <ItemList
