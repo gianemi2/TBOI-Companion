@@ -6,6 +6,9 @@ export function matchesSearch(item: Item, query: string): boolean {
 
     const q = query.toLowerCase()
 
+    if (q === "passive" || q === "active")
+        return (typeof item.type === "string" && item.type.toLowerCase().includes(q))
+
     return Object.values(item).some(value =>
         typeof value === "string" &&
         value.toLowerCase().includes(q)
