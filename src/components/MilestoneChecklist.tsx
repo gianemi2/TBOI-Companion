@@ -2,12 +2,17 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { useLocalStorage } from "@/hooks/useLocalStorage"
 import { getCachedItems } from "@/lib/fetchItems"
 import type { MilestoneSection } from "@/types/milestones"
+import type { Item } from "@/types/item"
+import { ItemDialog } from "./ItemDialog"
+import MilestoneItem from "./MilestoneItem"
+import { useState } from "react"
 
 interface Props {
     sections: MilestoneSection[]
 }
 
 export function MilestoneChecklist({ sections }: Props) {
+    const [selectedItem, setSelectedItem] = useState<Item | null>(null)
     const [completed, setCompleted] = useLocalStorage<Record<string, boolean>>(
         "completed-milestones",
         {}
@@ -15,15 +20,8 @@ export function MilestoneChecklist({ sections }: Props) {
 
     const [showCompleted, setShowCompleted] = useLocalStorage(
         "show-completed",
-        true
+        false
     )
-
-    const data = getCachedItems();
-
-    if (!data)
-        return;
-
-    const { items } = data;
 
     function toggle(id: string) {
         setCompleted(prev => ({
@@ -68,36 +66,21 @@ export function MilestoneChecklist({ sections }: Props) {
                                 if (isDone && !showCompleted) return null
 
                                 return (
-                                    <div
-                                        key={id}
-                                        className="flex items-start gap-3 rounded-lg border border-border p-4"
-                                    >
-                                        <div className="flex flex-col gap-2">
-                                            <div className="flex gap-3 items-center font-medium">
-                                                <Checkbox
-                                                    checked={!!isDone}
-                                                    onCheckedChange={() => toggle(id)}
-                                                />
-                                                {m.title}
-                                            </div>
-
-                                            <div className="text-xs">
-                                                {m.unlock}
-                                            </div>
-
-                                            {section.bad === false && (
-                                                <p className="mt-1 text-sm text-muted-foreground">
-                                                    {m.description}
-                                                </p>
-                                            )}
-                                        </div>
-                                    </div>
+                                    <MilestoneItem
+                                        milestone={m}
+                                        onToggle={toggle}
+                                        onSelectItem={setSelectedItem}
+                                        id={id}
+                                        isDone={isDone}
+                                        key={id} />
                                 )
                             })}
                         </div>
                     </div>
                 )
             })}
+
+            <ItemDialog onClose={setSelectedItem} item={selectedItem} />
 
         </div>
     )

@@ -25,7 +25,10 @@
         "title": "Blank Rune & Clear Rune",
         "unlock": "Complete Challenge #30: The Guardian",
         "description": "You may be wondering why I'm recommending you unlock Blank Rune. Well, for starters, it is a direct upgrade over a rune shard since it both triggers a stronger version of the rune effect and has a chance to duplicate itself upon use. Unlocking Blank Rune is also the only way to gain access to Clear Rune, a rare but useful item that can be used to break the game. The challenge isn't too bad, in my opinion, and gets unlocked very early on.",
-        "items": null
+        "items": [
+          948,
+          259
+        ]
       },
       {
         "title": "Ansuz",
@@ -43,7 +46,7 @@
         "title": "Honorable Mention: Dagaz",
         "unlock": "Complete Challenge #4: Darkness Falls",
         "description": "Dagaz is definitely a great rune and serves as one of the only ways to remove curses. That being said, unlocking Darkness Falls takes too long for me to put it in this section.",
-        "items": null
+        "items": 943
       }
     ]
   },
@@ -61,7 +64,7 @@
         "title": "A Card Against Humanity",
         "unlock": "Complete Challenge #12: When Life Gives You Lemons",
         "description": "This is a great and very easy unlock that can give you tons of pickups and sometimes even Petrified Poop, which is an excellent trinket. It's also very recognizable as a ground pickup so you can find it in shops easier than most cards. The challenge is unlocked by default so this unlock should be a priority.",
-        "items": null
+        "items": 953
       },
       {
         "title": "Burnt Penny",
@@ -79,7 +82,7 @@
         "title": "Azazel",
         "unlock": "Take three Devil Deals in a single run",
         "description": "You'll probably unlock him without actually trying to but I figured I'd mention him anyway. In my opinion, Azazel is the single most powerful character in the game. He is the character you'll normally want to use for non-character specific unlocks because of how powerful he is, and he is also required to unlock Satanic Bible.",
-        "items": 688
+        "items": null
       },
       {
         "title": "Ace of Clubs",
@@ -138,8 +141,7 @@
       {
         "title": "Lilith",
         "unlock": "Defeat Ultra Greed or Ultra Greedier with Azazel",
-        "description": "Lilith is necessary to unlock Incubus, C Section, and Twisted Pair, all of which are on this list.",
-        "items": 1000
+        "description": "Lilith is necessary to unlock Incubus, C Section, and Twisted Pair, all of which are on this list."
       },
       {
         "title": "Forget Me Now",
@@ -151,7 +153,7 @@
         "title": "The Void",
         "unlock": "Defeat Hush",
         "description": "Unlocking The Void as fast as possible is going to save you a lot of hassle later on for annoying Delirium unlocks due to the mercurial nature of the portal appearing or not. You're going to need to defeat Delirium to get list inhabitants Eden's Soul and D Infinity.",
-        "items": 395
+        "items": null
       },
       {
         "title": "Incubus",
@@ -187,7 +189,7 @@
         "title": "Magdalene",
         "unlock": "Have seven or more heart containers at once",
         "description": "You'll almost certainly get this without trying. Magdalene is required for the next two unlocks.",
-        "items": 990
+        "items": null
       },
       {
         "title": "Credit Card",
@@ -361,13 +363,13 @@
         "title": "The D20",
         "unlock": "Defeat ??? with Isaac",
         "description": "The D20 is a fairly good item in its own right, but it allows you to break the game in Greed and Greedier! mode. Notwithstanding, you should put off unlocking this item until you're planning to grind out the Greed donation machine, since Isaac's Tears, a terrible item, is also required to be unlocked to get The D20, and is, in my opinion, a net negative for Normal and Hard mode.",
-        "items": null
+        "items": 163
       },
       {
         "title": "Greedier! Mode, Holy Mantle, & Keeper",
         "unlock": "Donate 500, 879, and 1000 coins respectively to the Greed donation machine",
         "description": "This is an annoying achievement. Use Tainted Cain, Azazel, Tainted Lilith, Cain, Tainted Judas, Lilith, Tainted Magdalene, Isaac, and Tainted Azazel to get it. Don't just use one of these characters as the chance for the Greed donation machine to break permanently increases for the character you're playing whenever you donate to it. Once you unlock Holy Mantle, which is an incredible item in its own right and borderline required for The Lost, you can choose to move to the next unlocks and come back later or just finish it off. And for the record, if you cheat here I'm gonna be really disappointed in you.",
-        "items": null
+        "items": 309
       },
       {
         "title": "The Stars?",
@@ -385,7 +387,7 @@
         "title": "The Lost",
         "unlock": "Die in a self-sacrifice room while holding Missing Poster",
         "description": "You're going to have to throw away a run in order to do this. Unless you're actively going for it, it's not gonna be a good feeling. Make sure you don't get teleported to Dark Room when your last heart is depleted; I speak from personal experience when I say that it will not unlock The Lost.",
-        "items": 999
+        "items": null
       },
       {
         "title": "Damocles",
@@ -409,7 +411,7 @@
         "title": "Keeper's Wooden Nickel",
         "unlock": "Defeat Isaac with Keeper",
         "description": "This makes all other Keeper unlocks much easier.",
-        "items": null
+        "items": 345
       },
       {
         "title": "[Optional] Keeper's Penny",
@@ -439,7 +441,7 @@
         "title": "Apollyon",
         "unlock": "Defeat Mega Satan",
         "description": "Apollyon is necessary to unlock Void and Echo Chamber. You can do this while getting the next unlock, if you haven't done it already.",
-        "items": 905
+        "items": null
       },
       {
         "title": "Void",
@@ -481,7 +483,7 @@
         "title": "[Optional] Inner Child",
         "unlock": "Defeat Greed with Jacob & Esau",
         "description": "On paper, this is just an extra life, which wouldn't be worth it considering the difficulty of its unlock. What makes this item special is that while playing as all tainted characters (as well as any regular character that has already unlocked their tainted counterpart), the secret closet on the Home floor will contain Inner Child instead of the tainted character unlock. For most characters, I don't think this is that important, but for the next unlock it could be worth getting.",
-        "items": null
+        "items": 677
       },
       {
         "title": "Sacred Orb",
@@ -499,7 +501,7 @@
         "title": "Missing No.",
         "unlock": "Complete Boss Rush with Lazarus",
         "description": "This is the worst item in the game. It has zero redeeming qualities and basically ruins any run the moment you add it to your inventory. You have to actively go out of your way to get it, so make sure you put this awful item off for as long as possible and only unlock it when you're planning on getting Mega Mush or Death Certificate.",
-        "items": null
+        "items": 254
       },
       {
         "title": "Torn Card",
@@ -517,7 +519,7 @@
         "title": "Samson's Child's Heart",
         "unlock": "Complete Challenge #34: Ultra Hard",
         "description": "The unlock from this challenge isn't worth the pain and boredom at all. Ultra Hard is the hardest and worst challenge in the entire game. By the time you beat it, you'll like the game less and be more lacking in motivation to get the rest of the unlocks. Samson is an easy character and you don't need Child's Heart to fill out his completion marks, so put off doing this mortifying challenge for as long as possible.",
-        "items": null
+        "items": 754
       },
       {
         "title": "TMTRAINER",
@@ -619,7 +621,7 @@
         "title": "The D100",
         "unlock": "Complete Boss Rush with The Lost",
         "description": "This one is gonna be controversial. I understand that this item has use, but in my opinion it's just too chaotic. All of its reroll capabilities are overshadowed by its D4 effect. In all my hours of Isaac I have never used this item. Every time I see it I'm either having a good run or a good enough run that I don't want to risk ruining it. Ask yourself this: You almost certainly already have D4 unlocked, and especially considering the difficulty of beating Boss Rush with The Lost, do you really need another active item that rerolls your inventory?",
-        "items": null
+        "items": 279
       }
     ]
   },
