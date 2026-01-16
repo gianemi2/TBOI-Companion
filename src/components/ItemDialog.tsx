@@ -17,7 +17,7 @@ interface Props {
 export function ItemDialog({ item, onClose }: Props) {
     return (
         <Dialog open={!!item} onOpenChange={() => onClose(null)}>
-            <DialogContent className="max-w-lg max-h-[80vh] overflow-auto">
+            <DialogContent className="max-w-lg w-[95%] max-h-[80vh] overflow-auto">
                 {item && (
                     <>
                         <DialogHeader>
