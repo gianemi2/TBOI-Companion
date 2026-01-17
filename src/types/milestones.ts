@@ -1,5 +1,3 @@
-import { Item } from "./item"
-
 export type MilestoneItem = {
     title: string
     unlock: string

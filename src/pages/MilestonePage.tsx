@@ -3,7 +3,7 @@ import { MilestoneChecklist } from "@/components/MilestoneChecklist"
 
 export default function MilestonesPage() {
     return (
-        <div className="min-h-screen bg-background text-foreground p-6">
+        <div className="min-h-screen bg-background text-foreground p-4">
             <h1 className="text-3xl font-bold mb-6">
                 Milestones
             </h1>
