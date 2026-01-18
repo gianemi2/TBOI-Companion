@@ -57,8 +57,14 @@
       {
         "items": 510,
         "title": "Broken Modem",
-        "unlock": "Complete seven daily challenges) & Cracked Crown (Complete five daily challenges in a row; they don't have to be consecutive days",
-        "description": "Broken Modem is my favorite item in the entire game since it was buffed in Repentance. Whenever you pick up this item you are guaranteed to think to yourself \"Thank you, Broken Modem!\" at least once during your run because of the many helpful effects it has. Daily challenges are completely separate from the rest of the game in terms of unlocks, so you have no reason to not play a daily challenge every day until you unlock Broken Modem. While you're at it, try to get Cracked Crown as well; it's a really good stat trinket."
+        "unlock": "Complete seven daily challenges",
+        "description": "Broken Modem is my favorite item in the entire game since it was buffed in Repentance. Whenever you pick up this item you are guaranteed to think to yourself \"Thank you, Broken Modem!\" at least once during your run because of the many helpful effects it has. Daily challenges are completely separate from the rest of the game in terms of unlocks, so you have no reason to not play a daily challenge every day until you unlock Broken Modem. "
+      },
+      {
+        "items": 811,
+        "title": "Cracked Crown",
+        "unlock": "Complete five daily challenges in a row; they don't have to be consecutive days",
+        "description": "While you're at Broken modem, try to get Cracked Crown as well; it's a really good stat trinket."
       },
       {
         "items": 953,
