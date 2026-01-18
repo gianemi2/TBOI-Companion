@@ -4,6 +4,7 @@ import type { MilestoneItem, MilestoneSection } from '@/types/milestones'
 import { Item } from '@/types/item'
 import { getCachedItems } from '@/lib/fetchItems'
 import { ItemCard } from './ItemCard'
+import { SpoilerText } from './ui/spoiler-text'
 
 type MilestoneItemProps = {
     id: string
@@ -39,7 +40,7 @@ export default function MilestoneItem({ id, milestone, isDone, onToggle, onSelec
                         checked={!!isDone}
                         onCheckedChange={() => onToggle(id)}
                     />
-                    {milestone.title}
+                    <SpoilerText text={milestone.title} className='text-base'></SpoilerText>
 
                     {milestoneItems.map((item: Item) => <ItemCard
                         item={item}
@@ -47,13 +48,11 @@ export default function MilestoneItem({ id, milestone, isDone, onToggle, onSelec
                     />)}
                 </div>
 
-                <div className="text-xs">
-                    {milestone.unlock}
-                </div>
+                <SpoilerText className='text-xs' text={milestone.unlock} />
 
-                <p className="mt-1 text-sm text-muted-foreground">
-                    {milestone.description}
-                </p>
+                <SpoilerText text={milestone.description} />
+
+
 
             </div>
         </div>
