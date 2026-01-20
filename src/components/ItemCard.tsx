@@ -11,12 +11,12 @@ export const ItemCard = React.memo(({ item, onClick }: Props) => {
     return (
         <button
             onClick={onClick}
-            className="flex items-center justify-center w-10 h-10"
+            className="flex items-center justify-center w-9 h-9"
         >
             {/* Sprite */}
 
             <div
-                className="w-8 h-8 shrink-0 bg-no-repeat bg-contain scale-150"
+                className="w-8 h-8 shrink-0 bg-no-repeat bg-contain scale-125"
                 style={{
                     backgroundImage: `${item.bg ? item.bg : "url(/isaac.png)"}`,
                     backgroundPosition: `${item.bg ? "" : `-${item.index * 32}px 0px`}`,

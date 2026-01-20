@@ -62,9 +62,10 @@ export default function Page() {
     }
 
     return (
-        <div className="bg-center bg-no-repeat bg-fixed" style={{
-            backgroundImage: "url(/cellar.jpg)",
-        }}>
+        <div>
+            <div className="bg-center bg-no-repeat bg-fixed min-h-screen fixed top-0 bottom-0 left-0 right-0 -z-10" style={{
+                backgroundImage: "url(/cellar.jpg)",
+            }}></div>
             <div className="min-h-screen pb-12">
                 <div
                     style={{

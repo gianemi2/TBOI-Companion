@@ -41,7 +41,7 @@ export function MilestoneChecklist({ sections }: Props) {
     return (
         <PageContainer>
             {/* FILTER */}
-            <SearchContainer>
+            <SearchContainer className="flex-wrap">
                 <div className="flex flex-col gap-2">
                     <Input
                         type="text"
