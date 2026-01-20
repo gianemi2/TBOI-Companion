@@ -62,11 +62,15 @@ export default function Page() {
     }
 
     return (
-        <div>
-            <div className="bg-center bg-no-repeat bg-fixed min-h-screen fixed top-0 bottom-0 left-0 right-0 -z-10" style={{
-                backgroundImage: "url(/cellar.jpg)",
-            }}></div>
-            <div className="min-h-screen pb-12">
+        <div className="relative min-h-[100dvh]">
+            <img
+                src="/cellar.jpg"
+                alt=""
+                className="fixed inset-0 w-full h-full object-cover -z-20"
+            />
+
+            <div className="fixed inset-0 bg-black/30 -z-10" />
+            <div className="min-h-[100dvh] pb-12">
                 <div
                     style={{
                         backgroundImage: "url(/isaac.png)",
