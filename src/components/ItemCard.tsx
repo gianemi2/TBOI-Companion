@@ -11,14 +11,14 @@ export const ItemCard = React.memo(({ item, onClick }: Props) => {
     return (
         <button
             onClick={onClick}
-            className="flex items-center gap-3 scale-125 rounded-md hover:bg-muted transition text-left"
+            className="flex items-center justify-center w-10 h-10"
         >
             {/* Sprite */}
 
             <div
-                className="w-8 h-8 shrink-0 bg-no-repeat bg-contain"
+                className="w-8 h-8 shrink-0 bg-no-repeat bg-contain scale-150"
                 style={{
-                    backgroundImage: `${item.bg ? item.bg : "url(/isaac.jpg)"}`,
+                    backgroundImage: `${item.bg ? item.bg : "url(/isaac.png)"}`,
                     backgroundPosition: `${item.bg ? "" : `-${item.index * 32}px 0px`}`,
                     backgroundSize: `${item.bg ? "" : "38688px 32px"}`,
                     willChange: "transform" // 👈 aiuta Safari

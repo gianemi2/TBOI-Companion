@@ -2,6 +2,10 @@ import milestones from "@/data/milestones.json"
 import { MilestoneChecklist } from "@/components/MilestoneChecklist"
 
 export default function MilestonesPage() {
+
+    return (
+        <div className="min-h-screen"><MilestoneChecklist sections={milestones} /></div>
+    )
     return (
         <div className="min-h-screen bg-background text-foreground p-4">
             <h1 className="text-3xl font-bold mb-6">

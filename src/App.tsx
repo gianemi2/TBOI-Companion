@@ -13,7 +13,7 @@ import { APP_VERSION } from "./constants/AppVersion"
 function preloadImages() {
     return new Promise<void>((resolve) => {
         const img = new Image()
-        img.src = "/isaac.jpg"
+        img.src = "/isaac.png"
         img.onload = () => resolve()
     })
 }
@@ -62,11 +62,13 @@ export default function Page() {
     }
 
     return (
-        <div>
-            <div className="bg-[#272727] min-h-screen pb-12">
+        <div className="bg-center bg-no-repeat bg-fixed" style={{
+            backgroundImage: "url(/cellar.jpg)",
+        }}>
+            <div className="min-h-screen pb-12">
                 <div
                     style={{
-                        backgroundImage: "url(/isaac.jpg)",
+                        backgroundImage: "url(/isaac.png)",
                         width: 0,
                         height: 0,
                         position: "fixed",
@@ -91,7 +93,7 @@ export default function Page() {
 
                 {activePage === "items" ? <Items /> : <MilestonesPage />}
             </div>
-            <div className="py-2 px-3 text-xs text-right">{APP_VERSION}</div>
+            <div className="py-2 px-6 text-xs text-right">v. {APP_VERSION}</div>
         </div>
 
     )

@@ -8,11 +8,12 @@ export default {
     theme: {
         extend: {
             colors: {
+                accent: "hsl(15, 18%, 4%)",
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
 
                 border: "hsl(var(--border))",
-                input: "hsl(var(--input))",
+                input: "hsl(224.28, 76.33%, 48.04%)",
                 ring: "hsl(var(--ring))",
             },
             borderRadius: {

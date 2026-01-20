@@ -14,6 +14,8 @@ import { X } from "lucide-react"
 import { ItemList } from "./ItemList"
 import { getCachedItems } from "@/lib/fetchItems"
 import { cn } from "@/lib/utils"
+import { SearchContainer } from "./ui/search-container"
+import { PageContainer } from "./ui/page-container"
 
 export function Items() {
 
@@ -56,8 +58,8 @@ export function Items() {
 
     return (
         <>
-            <div className="p-4 space-y-4">
-                <div className="flex gap-2 items-center sticky top-0 bg-[#0D0A09] z-10 -m-4 mb-4 p-4">
+            <PageContainer>
+                <SearchContainer>
                     <Input
                         placeholder="Cerca ovunque..."
                         value={searchInput}
@@ -79,7 +81,7 @@ export function Items() {
                     >
                         <X className="w-4 h-4" />
                     </Button>
-                </div>
+                </SearchContainer>
 
                 <ItemList
                     items={filtered.items}
@@ -98,7 +100,7 @@ export function Items() {
                     title="Consumables"
                     onSelectItem={handleSelectItem}
                 />
-            </div>
+            </PageContainer>
 
             <ItemDialog
                 item={selectedItem}

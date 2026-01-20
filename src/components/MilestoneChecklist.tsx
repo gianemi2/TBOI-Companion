@@ -6,6 +6,13 @@ import type { Item } from "@/types/item"
 import { ItemDialog } from "./ItemDialog"
 import MilestoneItem from "./MilestoneItem"
 import { useState } from "react"
+import { SearchContainer } from "./ui/search-container"
+import { Input } from "./ui/input"
+import { PageContainer } from "./ui/page-container"
+import { Switch } from "./ui/switch"
+import { Label } from "./ui/label"
+import { Toggle } from "./ui/toggle"
+import { Eye, EyeClosed, ViewIcon } from "lucide-react"
 
 interface Props {
     sections: MilestoneSection[]
@@ -32,32 +39,34 @@ export function MilestoneChecklist({ sections }: Props) {
     }
 
     return (
-        <div className="space-y-8">
+        <PageContainer>
             {/* FILTER */}
-            <div className="flex flex-col sm:flex-row gap-3">
-                <div className="flex items-center gap-3">
-                    <Checkbox
-                        checked={showCompleted}
-                        onCheckedChange={() => setShowCompleted(v => !v)}
-                    />
-                    <span className="text-sm text-muted-foreground">
-                        Mostra completati
-                    </span>
-                </div>
-
+            <SearchContainer>
                 <div className="flex flex-col gap-2">
-                    <span className="text-sm text-muted-foreground">
-                        Filtra per condizione di sblocco
-                    </span>
-                    <input
+                    <Input
                         type="text"
                         placeholder="Nome personaggio"
                         value={unlockFilter}
                         onChange={e => setUnlockFilter(e.target.value)}
-                        className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                        className="w-auto"
                     />
                 </div>
-            </div>
+
+                <div className="flex items-center gap-2">
+                    <Checkbox
+                        checked={showCompleted}
+                        onCheckedChange={() => setShowCompleted(v => !v)}
+                        id="show-completed"
+                    />
+                    <label
+                        htmlFor="show-completed"
+                        className="text-sm cursor-pointer select-none"
+                    >
+                        Mostra milestone completati
+                    </label>
+                </div>
+
+            </SearchContainer>
 
 
             {sections.map(section => {
@@ -114,6 +123,6 @@ export function MilestoneChecklist({ sections }: Props) {
 
             <ItemDialog onClose={setSelectedItem} item={selectedItem} />
 
-        </div>
+        </PageContainer>
     )
 }

@@ -31,12 +31,11 @@ export default function MilestoneItem({ id, milestone, isDone, onToggle, onSelec
 
     return (
         <div
-            className="flex items-start gap-3 rounded-lg border border-border p-4 bg-[#272727]"
+            className="flex items-start gap-3 rounded-lg border border-border p-4 bg-accent"
         >
             <div className="flex flex-col gap-2">
                 <div className="flex gap-3 items-center font-medium">
                     <Checkbox
-                        className="border-blue-600 data-[state=checked]:border-blue-600 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white dark:data-[state=checked]:border-blue-700 dark:data-[state=checked]:bg-blue-700"
                         checked={!!isDone}
                         onCheckedChange={() => onToggle(id)}
                     />
