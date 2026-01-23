@@ -5,6 +5,7 @@ import { Item } from '@/types/item'
 import { getCachedItems } from '@/lib/fetchItems'
 import { ItemCard } from './ItemCard'
 import { SpoilerText } from './ui/spoiler-text'
+import { Label } from './ui/label'
 
 type MilestoneItemProps = {
     id: string
@@ -49,7 +50,7 @@ export default function MilestoneItem({ id, milestone, isDone, onToggle, onSelec
 
                 <SpoilerText className='text-xs' text={milestone.unlock} />
 
-                <SpoilerText text={milestone.description} />
+                {milestone.description && <SpoilerText text={milestone.description} />}
 
 
 

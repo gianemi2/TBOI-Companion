@@ -30,7 +30,7 @@ export function ItemDialog({ item, onClose }: Props) {
                                         backgroundSize: `${item.bg ? "" : "38688px 32px"}`
                                     }}
                                 />
-                                {item.title}
+                                {item.title} - {item.index}
                                 {
                                     (item.quality !== undefined && typeof item.quality !== "boolean") && (
                                         <div className="flex gap-1 items-center">

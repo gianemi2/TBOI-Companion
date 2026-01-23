@@ -558,6 +558,35 @@
     ]
   },
   {
+    "milestoneTitle": "The Extra Ones (Part 1)",
+    "bad": false,
+    "milestones": [
+      {
+        "items": 716,
+        "title": "Gello",
+        "unlock": "Defeat Delirium with Tainted Lilith"
+      },
+      {
+        "title": "Crane game",
+        "unlock": "Defeat Mega Satan with Tainted Samson"
+      },
+      {
+        "items": 642,
+        "title": "Star of Bethlem",
+        "unlock": "Defeat Delirium with Bethany"
+      },
+      {
+        "title": "Mega Chest",
+        "unlock": "Defeat Delirium with Tainted Isaac"
+      },
+      {
+        "items": 655,
+        "title": "Guppy Eye",
+        "unlock": "Defeat Mother with Cain"
+      }
+    ]
+  },
+  {
     "milestoneTitle": "The Bad Ones (Part 1)",
     "bad": true,
     "milestones": [
