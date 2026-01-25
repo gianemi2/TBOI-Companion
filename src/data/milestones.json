@@ -142,6 +142,11 @@
         "description": "The Host is quite an easy challenge that's unlocked by default and Tech.5 is a pretty good quality 3 item, so I think it earns a place here.\n\nAs of the latest Repentance+ patch, they've actually given Tech.5 what I consider to be a slight nerf which grants it a 5% chance to apply a Fruit Cake effect. Apparently this used to be the intended implementation of the item but was accidentally removed at some point. Since Fruit Cake has a small chance to shoot out an Ipecac tear, this also applies to Tech.5, meaning that you can damage yourself with Tech.5 unexpectedly and basically unavoidably. It's a very small chance, but as a result, I can't recommend picking this item up as either variant of The Lost as it can end your run.\n\nStill a good item. I'd be excited to see it on all other characters."
       },
       {
+        "items": 165,
+        "title": "Epic Fetus",
+        "unlock": "Complete Challenge #19: The Family Man"
+      },
+      {
         "items": null,
         "title": "Azazel",
         "unlock": "Take three Devil Deals in a single run",
@@ -322,6 +327,16 @@
         "description": "This is one of the best trinkets in the game. Its simple damage up is incredibly powerful."
       },
       {
+        "title": "Gold Heart",
+        "unlock": "Complete Challenge #21: XXXXXXXXXXXL",
+        "description": "Un cuore oro che, quando verrai colpito, dropperà monete. "
+      },
+      {
+        "title": "Gold Bomb",
+        "unlock": "Complete Challenge #23: Blue Bomber",
+        "description": "Bombe infinite per il piano corrente! "
+      },
+      {
         "items": 1004,
         "title": "Bethany",
         "unlock": "Defeat Mom's Heart on Hard Mode with Lazarus without dying",
@@ -430,6 +445,11 @@
         "description": "The D20 is a fairly good item in its own right, but it allows you to break the game in Greed and Greedier! mode. Notwithstanding, you should put off unlocking this item until you're planning to grind out the Greed donation machine, since Isaac's Tears, a terrible item, is also required to be unlocked to get The D20, and is, in my opinion, a net negative for Normal and Hard mode."
       },
       {
+        "items": 458,
+        "title": "Eye of Belial",
+        "unlock": "Defeat Ultra Greedier with Judas"
+      },
+      {
         "items": 309,
         "title": "Greedier! Mode, Holy Mantle, & Keeper",
         "unlock": "Donate 500, 879, and 1000 coins respectively to the Greed donation machine",
@@ -452,6 +472,11 @@
         "title": "The Lost",
         "unlock": "Die in a self-sacrifice room while holding Missing Poster",
         "description": "You're going to have to throw away a run in order to do this. Unless you're actively going for it, it's not gonna be a good feeling. Make sure you don't get teleported to Dark Room when your last heart is depleted; I speak from personal experience when I say that it will not unlock The Lost."
+      },
+      {
+        "items": 984,
+        "title": "XX - Judgement?",
+        "unlock": "Defeat Ultra Greedier with Tainted Lazarus"
       },
       {
         "items": 573,
@@ -508,7 +533,7 @@
         "description": "Apollyon is necessary to unlock Void and Echo Chamber. You can do this while getting the next unlock, if you haven't done it already."
       },
       {
-        "items": 395,
+        "items": 473,
         "title": "Void",
         "unlock": "Defeat Delirium with Apollyon",
         "description": "This item already had game breaking potential and it received a pretty sizable buff in Repentance+ that reduced its charge time. It is now overpowered in my opinion and one of the best active items in the game that allows you to take other active items with you as well as absorb passive items for stat upgrades. This item wasn't on the list before because in the early game it was a bit cumbersome to take advantage of, but reducing its charge time fixes this."
@@ -562,9 +587,19 @@
     "bad": false,
     "milestones": [
       {
+        "items": 377,
+        "title": "Eden's Blessing",
+        "unlock": "Defeat Hush with Eden"
+      },
+      {
         "items": 716,
         "title": "Gello",
         "unlock": "Defeat Delirium with Tainted Lilith"
+      },
+      {
+        "title": "Charged Key",
+        "unlock": "Complete Challenge #33: Pokey Mans",
+        "description": "Una chiave che ricarica anche la batteria dell'oggetto attivo. "
       },
       {
         "title": "Crane game",
@@ -577,12 +612,87 @@
       },
       {
         "title": "Mega Chest",
-        "unlock": "Defeat Delirium with Tainted Isaac"
+        "unlock": "Defeat Mega Satan with Tainted Isaac"
       },
       {
         "items": 655,
         "title": "Guppy Eye",
         "unlock": "Defeat Mother with Cain"
+      },
+      {
+        "items": 865,
+        "title": "Devil's Crown",
+        "unlock": "Defeat Mother with Azazel"
+      },
+      {
+        "items": 972,
+        "title": "VIII - Justice?",
+        "unlock": "Complete Challenge #43: Cantripped!"
+      },
+      {
+        "items": 964,
+        "title": "0 - The Fool?",
+        "unlock": "Defeat Ultra Greedier with Tainted Lost"
+      },
+      {
+        "items": 989,
+        "title": "Soul of Isaac",
+        "unlock": "Defeat Hush and complete Boss Rush with Tainted Isaac"
+      },
+      {
+        "items": 991,
+        "title": "Soul of Cain",
+        "unlock": "Defeat Hush and complete Boss Rush with Tainted Cain"
+      },
+      {
+        "items": 998,
+        "title": "Soul of Eden",
+        "unlock": "Defeat Hush and complete Boss Rush with Tainted Eden"
+      },
+      {
+        "items": 1000,
+        "title": "Soul of Lilith",
+        "unlock": "Defeat Hush and complete Boss Rush with Tainted Lilith"
+      },
+      {
+        "items": 1001,
+        "title": "Soul of Keeper",
+        "unlock": "Defeat Hush and complete Boss Rush with Tainted Keeper"
+      },
+      {
+        "items": 449,
+        "title": "Compound Fracture",
+        "unlock": "Defeat Delirium with Lazarus"
+      },
+      {
+        "items": 385,
+        "title": "Rune bag",
+        "unlock": "Defeat Isaac with Lilith"
+      },
+      {
+        "items": 492,
+        "title": "Euthanasia",
+        "unlock": "Defeat Delirium with Lilith"
+      },
+      {
+        "items": 545,
+        "title": "Brittle Bones",
+        "unlock": "Defeat The Lamb with The Forgotten"
+      },
+      {
+        "items": 615,
+        "title": "Genesis",
+        "unlock": "Defeat Ultra Greedier with Jacob & Esau"
+      },
+      {
+        "items": 679,
+        "title": "Belly Jelly",
+        "unlock": "Defeat The Beast with Tainted Magdalene"
+      },
+      {
+        "items": 988,
+        "title": "Wild Card",
+        "unlock": "Defeat Mega Satan with Tainted Eden"
       }
     ]
   },
