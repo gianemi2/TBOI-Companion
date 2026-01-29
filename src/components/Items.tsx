@@ -16,6 +16,7 @@ import { getCachedItems } from "@/lib/fetchItems"
 import { cn } from "@/lib/utils"
 import { SearchContainer } from "./ui/search-container"
 import { PageContainer } from "./ui/page-container"
+import { InputGroup, InputGroupAddon, InputGroupInput } from "./ui/input-group"
 
 export function Items() {
 
@@ -60,12 +61,22 @@ export function Items() {
         <>
             <PageContainer>
                 <SearchContainer>
-                    <Input
-                        placeholder="Cerca ovunque..."
-                        value={searchInput}
-                        onChange={e => setSearchInput(e.target.value)}
-                        className="w-auto"
-                    />
+                    <InputGroup>
+                        <InputGroupInput placeholder="Cerca ovunque..."
+                            value={searchInput}
+                            onChange={e => setSearchInput(e.target.value)}
+                            className="w-auto" />
+                        {
+                            searchInput !== "" && (
+                                <InputGroupAddon className="cursor-pointer" align="inline-end" onClick={() => {
+                                    setSearchInput('')
+                                    setSearch('')
+                                }}>
+                                    <X />
+                                </InputGroupAddon>
+                            )
+                        }
+                    </InputGroup>
 
                     <PoolSelect
                         value={poolFilter}
