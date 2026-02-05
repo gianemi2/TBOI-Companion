@@ -1,18 +1,13 @@
 import { Checkbox } from "@/components/ui/checkbox"
 import { useLocalStorage } from "@/hooks/useLocalStorage"
-import { getCachedItems } from "@/lib/fetchItems"
-import type { MilestoneSection } from "@/types/milestones"
 import type { Item } from "@/types/item"
-import { ItemDialog } from "./ItemDialog"
-import MilestoneItem from "./MilestoneItem"
+import type { MilestoneSection } from "@/types/milestones"
 import { useState } from "react"
-import { SearchContainer } from "./ui/search-container"
+import { EntityDialog } from "./EntityDialog"
+import MilestoneItem from "./MilestoneItem"
 import { Input } from "./ui/input"
 import { PageContainer } from "./ui/page-container"
-import { Switch } from "./ui/switch"
-import { Label } from "./ui/label"
-import { Toggle } from "./ui/toggle"
-import { Eye, EyeClosed, ViewIcon } from "lucide-react"
+import { SearchContainer } from "./ui/search-container"
 
 interface Props {
     sections: MilestoneSection[]
@@ -121,7 +116,7 @@ export function MilestoneChecklist({ sections }: Props) {
             })}
 
 
-            <ItemDialog onClose={setSelectedItem} item={selectedItem} />
+            <EntityDialog onClose={setSelectedItem} entity={selectedItem} />
 
         </PageContainer>
     )

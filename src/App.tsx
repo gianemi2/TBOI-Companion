@@ -1,14 +1,15 @@
 'use client'
 
 import { Items } from "@/components/Items"
+import { fetchItems } from "@/lib/fetchItems"
+import { BookText, Milestone, ShoppingBag } from "lucide-react"
 import { useEffect, useState } from "react"
 import { LoadingScreen } from "./components/LoadingScreen"
-import { fetchItems } from "@/lib/fetchItems"
-import MilestonesPage from "./pages/MilestonePage"
-import { ButtonGroup } from "./components/ui/button-group"
 import { Button } from "./components/ui/button"
-import { Milestone, ShoppingBag } from "lucide-react"
+import { ButtonGroup } from "./components/ui/button-group"
 import { APP_VERSION } from "./constants/AppVersion"
+import MilestonesPage from "./pages/MilestonePage"
+import MiscPage from "./pages/MiscPage"
 
 function preloadImages() {
     return new Promise<void>((resolve) => {
@@ -19,7 +20,7 @@ function preloadImages() {
 }
 
 const PAGES = [
-    "items", "milestones"
+    "items", "milestones", "misc"
 ] as const;
 
 type Page = (typeof PAGES)[number]
@@ -89,14 +90,18 @@ export default function Page() {
                                 variant="secondary"
                                 onClick={() => setActivePage(page)}
                             >
-                                {page === "items" ? <ShoppingBag /> : <Milestone />}
+                                {page === "items" && <ShoppingBag />}
+                                {page === "milestones" && <Milestone />}
+                                {page === "misc" && <BookText />}
                                 {page}
                             </Button>
                         ))
                     }
                 </ButtonGroup>
 
-                {activePage === "items" ? <Items /> : <MilestonesPage />}
+                {activePage === "items" && <Items />}
+                {activePage === "milestones" && <MilestonesPage />}
+                {activePage === "misc" && <MiscPage />}
             </div>
             <div className="py-2 px-6 text-xs text-right">v. {APP_VERSION}</div>
         </div>

@@ -1,22 +1,20 @@
 // components/ItemList.tsx
 "use client"
 
-import { useCallback, useEffect, useMemo, useState } from "react"
-import type { Item } from "@/types/item"
-import { ItemCard } from "./ItemCard"
-import { ItemDialog } from "./ItemDialog"
-import { Input } from "@/components/ui/input"
-import { PoolSelect } from "./PoolSelect"
-import { filterItems } from "@/utils/filterItems"
-import type { PoolFilter } from "@/constants/pools"
 import { Button } from "@/components/ui/button"
-import { X } from "lucide-react"
-import { ItemList } from "./ItemList"
+import type { PoolFilter } from "@/constants/pools"
 import { getCachedItems } from "@/lib/fetchItems"
 import { cn } from "@/lib/utils"
-import { SearchContainer } from "./ui/search-container"
-import { PageContainer } from "./ui/page-container"
+import { Entity } from "@/types/entity"
+import { filterItems } from "@/utils/filterItems"
+import { X } from "lucide-react"
+import { useCallback, useEffect, useMemo, useState } from "react"
+import { EntityDialog } from "./EntityDialog"
+import { EntityList } from "./EntityList"
+import { PoolSelect } from "./PoolSelect"
 import { InputGroup, InputGroupAddon, InputGroupInput } from "./ui/input-group"
+import { PageContainer } from "./ui/page-container"
+import { SearchContainer } from "./ui/search-container"
 
 export function Items() {
 
@@ -30,7 +28,7 @@ export function Items() {
     const [searchInput, setSearchInput] = useState("")
     const [search, setSearch] = useState("")
     const [poolFilter, setPoolFilter] = useState<PoolFilter>("all")
-    const [selectedItem, setSelectedItem] = useState<Item | null>(null)
+    const [selectedItem, setSelectedItem] = useState<Entity | null>(null)
 
     useEffect(() => {
         const t = setTimeout(() => setSearch(searchInput), 150);
@@ -45,8 +43,8 @@ export function Items() {
         };
     }, [items, trinkets, consumables, search, poolFilter]);
 
-    const handleSelectItem = useCallback((item: Item | null) => {
-        setSelectedItem(item);
+    const handleSelectItem = useCallback((entity: Entity | null) => {
+        setSelectedItem(entity);
     }, []);
 
     const hasFilters = search.length > 0 || poolFilter !== "all"
@@ -94,27 +92,27 @@ export function Items() {
                     </Button>
                 </SearchContainer>
 
-                <ItemList
-                    items={filtered.items}
+                <EntityList
+                    entities={filtered.items}
                     title="Items"
                     onSelectItem={handleSelectItem}
                 />
 
-                <ItemList
-                    items={filtered.trinkets}
+                <EntityList
+                    entities={filtered.trinkets}
                     title="Trinkets"
                     onSelectItem={handleSelectItem}
                 />
 
-                <ItemList
-                    items={filtered.consumables}
+                <EntityList
+                    entities={filtered.consumables}
                     title="Consumables"
                     onSelectItem={handleSelectItem}
                 />
             </PageContainer>
 
-            <ItemDialog
-                item={selectedItem}
+            <EntityDialog
+                entity={selectedItem}
                 onClose={handleSelectItem}
             />
         </>

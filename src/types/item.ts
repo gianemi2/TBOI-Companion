@@ -1,16 +1,15 @@
+import { BaseEntity } from "./baseEntity"
+
 // types/item.ts
-export interface Item {
+export type Item = BaseEntity & {
     index: number
     tid: number
     cid: number
     sid: number
-    title: string
     subtitle: string
     quality?: number | boolean
-    unlock: string
-    description: string
     type: string
     recharge: string
     pool: string
-    bg?: string
+    kind: "item"
 }

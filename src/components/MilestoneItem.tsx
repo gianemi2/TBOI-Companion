@@ -1,11 +1,9 @@
-import React from 'react'
-import { Checkbox } from './ui/checkbox'
-import type { MilestoneItem, MilestoneSection } from '@/types/milestones'
-import { Item } from '@/types/item'
 import { getCachedItems } from '@/lib/fetchItems'
-import { ItemCard } from './ItemCard'
+import { Item } from '@/types/item'
+import type { MilestoneItem } from '@/types/milestones'
+import { EntityCard } from './EntityCard'
+import { Checkbox } from './ui/checkbox'
 import { SpoilerText } from './ui/spoiler-text'
-import { Label } from './ui/label'
 
 type MilestoneItemProps = {
     id: string
@@ -42,8 +40,8 @@ export default function MilestoneItem({ id, milestone, isDone, onToggle, onSelec
                     />
                     <SpoilerText text={milestone.title} className='text-base'></SpoilerText>
 
-                    {milestoneItems.map((item: Item) => <ItemCard
-                        item={item}
+                    {milestoneItems.map((item: Item) => <EntityCard
+                        entity={item}
                         onClick={() => onSelectItem(item)}
                     />)}
                 </div>

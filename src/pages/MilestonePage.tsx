@@ -1,18 +1,17 @@
-import milestones from "@/data/milestones.json"
 import { MilestoneChecklist } from "@/components/MilestoneChecklist"
+import { getCachedItems } from "@/lib/fetchItems";
+import { useState } from "react";
 
 export default function MilestonesPage() {
 
+    const [data] = useState(() => getCachedItems());
+
+    if (!data)
+        return;
+
+    const { milestones } = data;
+
     return (
         <div className="min-h-[100dvh]"><MilestoneChecklist sections={milestones} /></div>
-    )
-    return (
-        <div className="min-h-[100dvh] bg-background text-foreground p-4">
-            <h1 className="text-3xl font-bold mb-6">
-                Milestones
-            </h1>
-
-            <MilestoneChecklist sections={milestones} />
-        </div>
     )
 }
