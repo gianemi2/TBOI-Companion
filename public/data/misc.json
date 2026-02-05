@@ -203,9 +203,10 @@
             },
             {
                 "index": 1184,
-                "name": "Spider Baby transformation",
+                "name": "Spider Baby",
                 "description": "Obtained by acquiring any 3 items with the  spider tag.\n\nSpawns a spider familiar that slowly walks towards enemies and applies random status effects upon touching them.",
-                "unlock": false
+                "unlock": false,
+                "path": "Spider_Baby_(Transformation)"
             },
             {
                 "index": 1185,
@@ -249,7 +250,8 @@
             },
             {
                 "index": 1139,
-                "name": "???"
+                "name": "???",
+                "path": "%3F%3F%3F_(Character)"
             },
             {
                 "index": 1140,

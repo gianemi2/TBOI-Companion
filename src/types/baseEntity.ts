@@ -5,4 +5,5 @@ export type BaseEntity = {
     description: string
     unlock: string | boolean
     scale?: number
+    path?: string
 }

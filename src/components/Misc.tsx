@@ -11,10 +11,13 @@ export const Misc = () => {
     const [selectedItem, setSelectedItem] = useState<Entity | null>(null)
 
     const handleSelectItem = useCallback((entity: Entity | null) => {
-        if (entity?.description || entity === null)
+        if (entity === null)
+            return setSelectedItem(entity)
+
+        if (entity?.description)
             return setSelectedItem(entity);
 
-        return window.open(getWikiUrl(entity!), "_blank", "noopener,noreferrer")
+        return window.open(getWikiUrl(entity), "_blank", "noopener,noreferrer")
     }, []);
 
     if (!data)

@@ -5,6 +5,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog"
+import { getWikiUrl } from "@/lib/getWikiUrl"
 import { Entity } from "@/types/entity"
 import type { Item } from "@/types/item"
 import { Star } from "lucide-react"
@@ -28,7 +29,7 @@ export function EntityDialog({ entity, onClose }: Props) {
                                     style={{
                                         backgroundImage: `${entity.bg ? entity.bg : "url(/isaac.png)"}`,
                                         backgroundPosition: `${entity.bg ? "" : `-${entity.index * 32}px 0px`}`,
-                                        backgroundSize: `${entity.bg ? "" : "38688px 32px"}`
+                                        backgroundSize: `${entity.bg ? "contain" : "38688px 32px"}`
                                     }}
                                 />
                                 {entity.name}
@@ -65,7 +66,7 @@ export function EntityDialog({ entity, onClose }: Props) {
                                             }
 
                                             <Button variant="outline" asChild>
-                                                <a target="_blank" href={`https://bindingofisaacrebirth.fandom.com/wiki/${entity.name.trimStart().replaceAll(' ', '_')}`}>Vedi wiki</a>
+                                                <a target="_blank" href={getWikiUrl(entity)}>Vedi wiki</a>
                                             </Button>
                                         </div>
                                     </>

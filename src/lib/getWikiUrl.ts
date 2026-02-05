@@ -1,7 +1,7 @@
 import { Entity } from "@/types/entity";
 
 export function getWikiUrl(entity: Entity) {
-    return `https://bindingofisaacrebirth.fandom.com/wiki/${entity.name
+    return `https://bindingofisaacrebirth.fandom.com/wiki/${entity.path ? entity.path : entity.name
         .trim()
         .replaceAll(" ", "_")}`
 }
