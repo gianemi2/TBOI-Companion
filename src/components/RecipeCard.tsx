@@ -52,50 +52,49 @@ export function RecipeCard({
             : null
 
     return (
-        <div
-            className={cn("flex flex-col lg:flex-row items-start rounded-lg border border-border transition-all p-3 bg-accent", pickerOpen && "bg-background")}
-        >
-            <div className="flex lg:flex-col items-center justify-between gap-2 mb-3">
-                <ItemSelect
-                    items={items}
-                    value={selectedItem}
-                    onSelect={(item: Entity) =>
-                        onChange({ itemId: item.index })
-                    }
-                />
-
-                <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={onDelete}
-                >
-                    <Trash2 className="w-4 h-4" />
-                </Button>
-            </div>
-
+        <div>
             <div
-                onClick={() => setPickerOpen(true)}
-                className="cursor-pointer"
+                className={cn("flex flex-row gap-3 items-start justify-between rounded-lg border border-border transition-all p-3 bg-accent", pickerOpen && "bg-background")}
             >
-                <PickupGrid
-                    pickups={pickups}
-                    onRemove={i =>
-                        setPickups(p =>
-                            p.map((v, idx) => (idx === i ? null : v))
-                        )
-                    }
-                />
-            </div>
 
+                <div className="flex flex-col items-center justify-between gap-2">
+                    <ItemSelect
+                        items={items}
+                        value={selectedItem}
+                        onSelect={(item: Entity) =>
+                            onChange({ itemId: item.index })
+                        }
+                    />
+
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={onDelete}
+                    >
+                        <Trash2 className="w-4 h-4" />
+                    </Button>
+                </div>
+
+                <div
+                    onClick={() => setPickerOpen(true)}
+                    className="cursor-pointer"
+                >
+                    <PickupGrid
+                        pickups={pickups}
+                        onRemove={i =>
+                            setPickups(p =>
+                                p.map((v, idx) => (idx === i ? null : v))
+                            )
+                        }
+                    />
+                </div>
+            </div>
             <PickupPickerBar
                 open={pickerOpen}
                 pickups={ALL_PICKUPS}
                 onPick={addPickup}
                 onClose={() => setPickerOpen(false)}
             />
-
-
-
         </div>
     )
 }

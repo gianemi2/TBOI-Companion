@@ -28,7 +28,7 @@ export function ItemSelect({ items, value, onSelect }: Props) {
         <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
                 <Button
-                    size="icon"
+                    size="icon-lg"
                     className=""
                     variant="outline"
                 >
@@ -36,7 +36,8 @@ export function ItemSelect({ items, value, onSelect }: Props) {
                         <>
                             <div
                                 className={cn(
-                                    "w-8 h-8 bg-no-repeat bg-contain"
+                                    "w-8 h-8 bg-no-repeat bg-contain",
+                                    value.scale ?? "scale-125"
                                 )}
                                 style={{
                                     backgroundImage: value.bg ?? "url(/isaac.png)",

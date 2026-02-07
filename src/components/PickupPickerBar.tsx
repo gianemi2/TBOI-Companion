@@ -1,4 +1,5 @@
 import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible"
+import { cn } from "@/lib/utils"
 import { CAIN_Q, Pickup } from "@/types/pickup"
 import { X } from "lucide-react"
 import { Button } from "./ui/button"
@@ -48,7 +49,7 @@ export function PickupPickerBar({
                                                 key={p.index}
                                                 onClick={() => onPick && onPick(p)}
                                                 className="
-                        w-9 h-9
+                        w-10 h-10
                         rounded-md
                         border
                         hover:bg-muted
@@ -56,7 +57,7 @@ export function PickupPickerBar({
                       "
                                             >
                                                 <div
-                                                    className="w-8 h-8 bg-no-repeat bg-contain"
+                                                    className={cn(`w-8 h-8 bg-no-repeat bg-contain scale-125`, !p.bg && "scale-150")}
                                                     style={{
                                                         backgroundImage: p.bg ?? "url(/isaac.png)",
                                                         backgroundPosition: p.bg

@@ -30,7 +30,7 @@ export default function TaintedCainPage() {
                 </Button>
             </div>
 
-            <div className="grid gap-3 lg:gap-4 grid-cols-2 md:grid-cols-2 lg:grid-cols-6">
+            <div className="grid gap-3 lg:gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
                 {recipes.map(recipe => (
                     <RecipeCard
                         key={recipe.id}
