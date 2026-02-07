@@ -34,9 +34,9 @@ export function EntityDialog({ entity, onClose }: Props) {
                                 />
                                 {entity.name}
                                 {
-                                    (entity.kind === "item" && entity.quality !== undefined && typeof entity.quality !== "boolean") && (
+                                    (entity.kind !== "misc" && typeof entity.quality === "number") && (
                                         <div className="flex gap-1 items-center">
-                                            {[1, 2, 3, 4].map((i) => (entity.quality !== undefined && typeof entity.quality !== "boolean" && entity.quality! >= i) ? <Star className="text-yellow-300 fill-yellow-300 h-4 w-4" /> : <Star className=" h-4 w-4" />)}
+                                            {[1, 2, 3, 4].map((i) => (typeof entity.quality === "number" && entity.quality! >= i) ? <Star className="text-yellow-300 fill-yellow-300 h-4 w-4" /> : <Star className=" h-4 w-4" />)}
                                         </div>
                                     )
                                 }

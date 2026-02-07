@@ -36,7 +36,7 @@ export function MilestoneChecklist({ sections }: Props) {
     return (
         <PageContainer>
             {/* FILTER */}
-            <SearchContainer className="flex-wrap">
+            <SearchContainer className="flex-wrap sticky top-0 bg-accent/90 z-10 -m-4 mb-4 p-4">
                 <div className="flex flex-col gap-2">
                     <Input
                         type="text"

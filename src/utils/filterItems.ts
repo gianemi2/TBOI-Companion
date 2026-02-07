@@ -1,6 +1,6 @@
 // utils/filterItems.ts
-import type { Item } from "@/types/item"
 import type { PoolFilter } from "@/constants/pools"
+import type { Item } from "@/types/item"
 import { matchesSearch } from "./fullTextSearch"
 
 type ItemsType = "items" | "trinkets" | "consumables"
@@ -9,7 +9,8 @@ export function filterItems(
     items: Item[],
     search: string,
     poolFilter: PoolFilter,
-    itemType: ItemsType
+    itemType: ItemsType,
+    qualityFilter: string[] = []
 ): Item[] {
     const poolQ = poolFilter.toLowerCase()
 
@@ -17,12 +18,19 @@ export function filterItems(
         const searchOk = matchesSearch(item, search)
 
         if (itemType !== "items")
-            return searchOk;
+            return searchOk
 
         const poolOk =
             poolFilter === "all" ||
-            (item.pool && item.pool?.toLowerCase().includes(poolQ))
+            (item.pool && item.pool.toLowerCase().includes(poolQ))
 
-        return searchOk && poolOk
+        const qualityOk =
+            qualityFilter.length === 0 ||
+            (
+                typeof item.quality === "number" &&
+                qualityFilter.includes(item.quality.toString())
+            )
+
+        return searchOk && poolOk && qualityOk
     })
 }

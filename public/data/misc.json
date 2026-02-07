@@ -5,6 +5,7 @@
             {
                 "index": 0,
                 "bg": "url(data:image/webp;base64,UklGRnICAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAVlA4TP0BAAAvP8APEIegNJKt5rlPlFllTbOUmhRDG2oiSYruv0MG4acBERTGybCAAzKURrLVPPeJMqus6b8TCkmKYf4DAAgcdaBEdGhQ+P97/bnvWndJIwk7YJMxx+i5iyWaazLQtm27btvwIAkIKgCc//9dgDLAXNuntSL6PwHH/xoDfqqY/zwBHQJ+lqBzKgQ/R9B9IdiDnyHovjCdYA9+ivbiTHpCe1jM+/kinYz2mD8jbttb7YYnBE4nJj0nHdXgEXlKO31hOkFb5OkTAktVC+069SXq1aJUtWTYFVjqHXAqcGfJcEDAqsBS54X3rfOS4YhxTWDZn4GisOihWi2wpq3tMjoPruIqgry05TbmllXgosgy3M14QXAsSlx7QzhiPJaJO3HWNphJfowD48Co0fKkb/pAAQUEFBB4juBMbvyRniVO0Bvfa9vkxu+m2Y+HKbOvzJCH5BtmKLPRyM/wY1RlVJ044wEb79iRKF6AVQujVQuARspgc1lAstSrqFQpc6oUlVqSAa0bx9IgaamWS7FamGC1oFgtSYO2rpuK1XJhVQujVS1gtZh6C7LLmqkt7AI4T21gmWtbbmpu+RbgWJXk2h0KHMualN004VjXubvis9ddZ0vzjs/fNbdkH5Dd0x7Q/mQI2nUbXz7LdduCY2O8++2z8e6x9Z2Nx0MXHP9jBABQU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
+                "kind": "misc",
                 "name": "Slot Machine",
                 "description": "Costs 1¢ to play.\n\nThe slots on the machine will spin and give a payout if all 3 of them land on the same icon.\n\nPossible payouts\n\n• 54% - nothing\n• 11.4% - coin\n• 9.3% - heart\n• 5.7% - 2 coins\n• 4.7% - pill\n• 4.7% - bomb\n• 3.1% - key\n• 3.1% - neutral fly\n• 2% - self-destruct with an explosion (check the \"When destroyed\" section)\n• 1.56% - Pretty Fly orbital (same as Pretty Fly)\n• 0.47% - self-destruct and spawn A Dollar or Portable Slot\n\nOn Hard Mode, the chances for a payout are halved.\n\nWhen destroyed\n\n• 78% - 2-3 random pickups (35%: 1-3 coins; 20% - heart; 30% - bomb; 15% - key)\n• 10% - pill\n• 10% - trinket\n• 1% - random chest\n• 1% - Locked Chest",
                 "unlock": false
@@ -12,6 +13,7 @@
             {
                 "index": 1,
                 "bg": "url(data:image/webp;base64,UklGRiwCAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAVlA4TLgBAAAvP8APEHegKJKk5jJ4SCqifx184QcGQIiSAEAbJEVwSPqQG3nV3ORXEwBIw4YOdCcZL16jgB7zHwAAEKqqJ0+YaaytMMi7+B9Wj7uvbcv0dsbx6YMcbZscqem+Qf0Rzza9uCPAFYjJ7AXIOcJmMyGewmpS+QlXJTfpPnKDIkxnsufYnaqWVxjR/wlw/1XR7TORArkGRWe2mieXv9DFBfPqwQ/4/ukTb26t/YjlT8Nc5JxDzSsXPMHb4B3t1PydmVcPyh2YqIVDWfPkctDzGWinqKVzcIwMKAt0D4qet9XMRfcxD01ALSJyesrMQxERGPAm7rDRQM398IOqN3HnOqlNzRi0ran9UQ6p/6OAnevFJeWVLfV3rpe0H/MsaK9MBNjgVS7Hw6irsHOd1AyMvIYi7bARrtKFHBQ1jac2pZREUnoh6cVtgqOgqYCW9ddwFBUU0Z4X+uMECooKbSoNxXVC7KJI2+dsOOZHlVcEqs7Z/AhOEal5oxzdv//wzZs3b7zCVWj7Yp1OqgYIbO0FFY0wxcxDTK7HplQOCMzc68BY0DlEW7QEW/jdPBOR6S4REQshozNm8JZ/d1BTQUlOAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEAAThCSU0EKAAAAAAADAAAAAI/8AAAAAAAADhCSU0EQwAAAAAADVBiZVcBEAAFAQAAAAAA)",
+                "kind": "misc",
                 "name": "Blood Donation Machine",
                 "description": "Costs half a heart to play. Prioritizes red hearts first.\n\nStarting from Chapter 4, costs a full heart to play.\n\nNot having enough HP to play can kill Isaac.\n\nPossible payouts\n\n• 1-3 coins of any type (only 1 if playing on Hard Mode). When playing as Keeper or Tainted Keeper, 0-1 coins.\n• Rarely drops Child's Heart.\n• Explodes, giving one of the final payouts.\n\nFinal payout\n\nOne of the following:\n• Blood Bag\n• IV Bag\n\nMultiple Blood Bags can appear per run, but only 1 IV Bag can spawn.\n\nWhen destroyed\n\n• Several coins or hearts.",
                 "unlock": false
@@ -19,6 +21,7 @@
             {
                 "index": 2,
                 "bg": "url(data:image/webp;base64,UklGRsICAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAVlA4TE4CAAAvP8APEJfAJgCANLj+7hCAsESF7aWG2khyGin0EjajASqnP2IGNZFsNT+CATQwdLTJvwFc5JoK5j8AgPd/SGjtiJP1P8fEBRHx9pzrzcVIHKkFaHYOEi3ilalytU+jkCTbdtBGtmjUFgGD2f9uJYjAs4zevy+i/xPw+NOY4Ktofw+wRgDfAmssdgR8B6zeMDgS3wCrN/xawJH4inljedkLzDejvS4br4Xakdr34HA+NR9wB3Cz4Ze9NNawbbhFbiYv3vBrAXtOuXkHyGXbpZL8s9ibsf0zJ+2SSk5cBVkb7FLyD7DYAHOSpE0lJyIC6AVZuzYJlXRe+6a65ERQ94Gs60nwlqDTTaVnCPq47+qo3YZJ6hWQuxrXGCDBFFJ0o1xNPUXAo9PAeC2u6kc343bGTrXt7HayIWC+wPkg48T7YwsGZ0w158Z6WTZ20sfPCFsMvlmu0vR5Nu2JijvZdtLnGW6KwfYpX4fT9HmGDydu5kqfp4/FkO175DP6HKuiyjfJttN0Ks5xA2fjJLWeEkPGp7jCqWismd7Sx35KE2WMCIkhJ/LsbsBg7WORFMH0bgdjFEmxFxuYV3eCwdauMkohBUzxjoCxKKTQrmIb5n6rB2lXGUO7ioI6pF0lQruKvM6Q6WYPc8fVERFuD3OVeHTKfY1tYw4TEL0GM16NDTy6zUZXY0P0WwNpA2lMvw1JW7XGJTbaQFL6vbSBlOxLMpV6aZOUMte4otcmpOTrtEGn5i2a3xHg8ZB/vyUODY8LOfv/t+lsXHrmwrhph/jDCFBTQUlOAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEAAThCSU0EKAAAAAAADAAAAAI/8AAAAAAAADhCSU0EQwAAAAAADVBiZVcBEAAFAQAAAAAA)",
+                "kind": "misc",
                 "name": "Fortune Telling Machine",
                 "description": "Costs 1¢ to play.\n\nPossible payouts\n\n• 65% - displays a random fortune text or seed on screen\n• 10.7% - trinket\n• 10.7% - soul heart\n• 10.7% - card/rune\n• 1.75% - self-destruct (cannot hurt Isaac) and spawn several random pickups\n• 1.16% - self-destruct and spawn Crystal Ball\n\nWhen destroyed\n\n• 78% - 2-3 random pickups (35%: 1-3 coins; 20% - heart; 30% - bomb; 15% - key)\n• 10% - pill\n• 10% - trinket\n• 1% - random chest\n• 1% - Locked Chest",
                 "unlock": false
@@ -26,6 +29,7 @@
             {
                 "index": 3,
                 "bg": "url(data:image/webp;base64,UklGRogBAABXRUJQVlA4WAoAAAAQAAAAIAAAIAAAVlA4TBQBAAAvIAAIEE+gJgDQBPr3IgJksNumNcw0QMJLDfp3oAANOP2cHVQTAGgC/XNRgRAu53T+AwD+/0hEJXxMlmVGKG0vOgKQq22L6vyHHrIn78Uc2ea3AuA24NBABo/rlDDr1pX9AmZqIKL/EyD/GuAcxTOWpJowJ0iqqpGaDVp0pkJXitTGLovXig2EzOFMqb/tsxuaSiBkDlcbuyxeTySNBNV4Ai6gmioAl+Q0JkREAFZGHWIaEQFY55mUNyZbPv02tyGlsUFEWOeDfWmZpgYjIvZh9ptfWuAFyV7nfVlnlGkqQHYX1PUFe3958JtvQ2pCgS5ysK9MJGeyNPLpt8MDiIjYvnldD09uMoHdA0bqFsDIaYuRPw5QU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
+                "kind": "misc",
                 "name": "Beggar",
                 "description": "Costs 1¢ to play.\n\nPossible payouts\n\n• Random pickup.\n• Random card.\n\nOn Hard Mode, the first payout will happen after at least 6 donations, while on other modes payout may happen after any amount of donations.\n\nFinal payout\n\n•   +35% chance for an Angel Room.\n• 50% - one of the following items: Breakfast, Lunch, Dinner, Dessert, Rotten Meat.\n• 50% - item from the Beggar item pool.\n\nWhen destroyed\n\n•   +35% chance for an Angel/Devil Deal.\n• Spawns several random pickups.",
                 "unlock": false
@@ -33,6 +37,7 @@
             {
                 "index": 4,
                 "bg": "url(data:image/webp;base64,UklGRpoBAABXRUJQVlA4WAoAAAAQAAAAIAAAIAAAVlA4TCUBAAAvIAAIEFegqJEkZeHHx6D85J4NpY2kQGdPPnjovz4sQXHbNk76uyfT36w3/wEA/38kqgyjWlXgAD8nY26ftw/gRtvetvkPM3gA3MvM0iMoSyVO/ymUrlQ7oWdFtq6E0tnmmgQdF4jo/wTIv7VGBEDEmhiGqGUM1HuFEQH13vsdSNw6H83MCHexHWPzu8FuO2Jdfxy89pmJTR43g4s+HXH9cfDaZ2Pzu8Fu+wXY4bzfjQAU4L1GAFoKzfxOEQE4h8DcL3c6j5xDCKF0qqqpEaHtKJtQojpPERH7ULVPdSiZzFLMoKnOfd3h4RIREWibz6ZyPpvMBva6aMr6XDlNY9zt6JrQMUNjOieE7pTjNDMiYidp055yojKEqxwwgIlYACNfthj57wBQU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
+                "kind": "misc",
                 "name": "Devil Beggar",
                 "description": "Costs half a heart to play. Prioritizes red hearts first.\n\nStarting from Chapter 4, costs a full heart to play.\n\nNot having enough HP to play can kill Isaac.\n\nPossible payouts\n\n• 25% → Random card.\n• 25% → Random pill.\n• 12.5% → Random trinket.\n• 37.5% → Final payout.\n\nOn Hard Mode, the first payout will happen after at least 6 donations, and any subsequent payout requires at least 3. On other modes, payout may happen anywhere between 1-8 donations.\n\nFinal payout\n\n•   -10% chance for an Angel Deal.\n• Item from the Demon Beggar item pool.\n\nWhen destroyed\n\n•   +35% chance for an Angel/Devil Deal.\n• 2 enemy spiders.",
                 "unlock": false
@@ -40,6 +45,7 @@
             {
                 "index": 5,
                 "bg": "url(data:image/webp;base64,UklGRlACAABXRUJQVlA4WAoAAAAQAAAARQAARQAAVlA4TNsBAAAvRUAREIegKJKk5vIhAv9SsICG/OMVbTANACANLn9wGw+7RJpsyV1NACAN44IG9M9CBTIoAdxj/gMA+P+PEqXiVmzqkvazHbXlFoJR8yx4FmWuNu1KTXCwqI0Blmy7bRsHbury/pdLPIAa8DPtvYj+O3DbNpLspHcHmmOLfcPtB4cteHAr9dh86y7prSEhZIVWdGsMegGStwYEFbzLhNmN0rmFJGpKG++pTm2tDqNfyVpaOvhGkArtmGoBmr5MUxRAFFUL6W3aPrAg9GGFiOoPDxBBLS36rjIdaUcg3e3xFfQG1VRxiUTDmEI9YRbJw5MEYoiMoEhw3TgnhA5OsiqYnj/QUBiR1f98lVNM7nDJ6oMIIfzK08fAH8coPpOy4+htUzRiqHQXCq6cubf40vmtjkNXmqzjqeU1zjTnYEmKE30e6SpngJn5Skw2yAE8lJyli1nOc0UC1fNIr65d1TxwS2R4wkAAN1XOI5GbSQwPRRtBpTyozU6HeMmxTm2gUh6Uw0jZ1wgq5QkCb6RSVfNImyQmliRXLQ8KHknAIFHFPBDwWLJ95irngYG1MaywLh5L9TxNT1IM6/DIGMBDaX0KBAC6kfU82cN5MnlcxTzX/8IO5CEzklKeb20TAFBTQUlOAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEAAThCSU0EKAAAAAAADAAAAAI/8AAAAAAAADhCSU0EQwAAAAAADVBiZVcBEAAFAQAAAAAA)",
+                "kind": "misc",
                 "name": "Shell Game",
                 "description": "Costs 1¢ to play.\n\nWhen given a coin, the beggar will lift one of the skulls up, revealing a coin, bomb, red heart, key, or Skatole. He will then shuffle the skulls around and wait for Isaac to bump into one of them, which will result in a payout.\n\nThe skull Isaac bumps into is not relevant.\n\nLeaving the room before bumping into a skull will reset the prize.\n\nEven though a Shell Game item pool exists, it is not used by this machine.\n\nPossible payouts\n\n• 2 of the previously shown pickup, or 3 if a coin was shown. These can be of any variant.\n• Enemy Attack Fly.\n\nFinal payout\n\n• Skatole\n\nWhen destroyed\n\n• Spawns several random pickups.",
                 "unlock": false
@@ -47,6 +53,7 @@
             {
                 "index": 6,
                 "bg": "url(data:image/webp;base64,UklGRpABAABXRUJQVlA4WAoAAAAQAAAAIgAAIgAAVlA4TBsBAAAvIoAIEEegNJIUNvkqkBSeJlDUtg1U9VUEBdA9x5/cJamJJIVNfqhINQZwwPwHABB+P9pyxlTYXwwcD+A2297G+bkBXxxFu/UIcQABAuH2cn1n+4dax792Ev69lZwGiOj/BMg/DDCDwUkR9RslTKFzb12ZEA/u/umewxjaud95q0zg4N51mbEIuHsLhBk+p3NvJ9UcMmgmjR2KAgfVPAaZJjEBINdaUEVEBGBLKaqlFEQAtmao3qlqCr0XM7OqvitaEiLC1iperKJumkQQkfhg59cPVgGcpYGlVbzscZqmGYCX/dJODp7rofh2ujTW1UHToZQeXYstbUuD3ik9LRjr6wWDIhLrtNxeLxgOIiJwvgCCTIwAQaZHgvyHAFBTQUlOAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEAAThCSU0EKAAAAAAADAAAAAI/8AAAAAAAADhCSU0EQwAAAAAADVBiZVcBEAAFAQAAAAAA)",
+                "kind": "misc",
                 "name": "Key Master",
                 "description": "Costs 1 key to play.\n\nCan consume a  Golden Key to guarantee the final payout.\n\nPossible payouts\n\n• Random chest.\n\nFinal payout\n\n• Item from the Key Master item pool.\n• Or Paper Clip.\n\nWhen destroyed\n\n•   +35% chance for an Angel/Devil Deal.\n• Several random pickups.",
                 "unlock": false
@@ -54,6 +61,7 @@
             {
                 "index": 7,
                 "bg": "url(data:image/webp;base64,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)",
+                "kind": "misc",
                 "name": "Donation Machine",
                 "description": "Touching the machine will donate 1¢ to it, increasing the displayed total by one.\n\nThe total amount of donations persist between runs and contribute towards unlocking specific items, and upgrading the shop, resulting in better shop layouts.\n\nDonation Machines cannot appear while achievements are disabled.\n\nPossible payouts\n\n• 2% chance to grant   +1 luck.\n• 0.15% chance to jam the machine, making it unavailable for the rest of the run. This chance increases by +0.15% with each coin donated during the run.\n•   increase Angel Room chance for every 10 pennies donated.\n\nFinal payout\n\n• Happens when donating the 1000th penny, which makes the machine explode, spawning ~12 dimes.\n• This will reset the total amount of donations back to 0¢, without reverting any previously unlocked achievements or shop upgrades.\n\nWhen destroyed\n\n• 7-14 pennies. These pennies, plus an additional 1 penny, are deducted from the total amount of donations.\n• The machine stays destroyed for the rest of the run.",
                 "unlock": false
@@ -61,6 +69,7 @@
             {
                 "index": 8,
                 "bg": "url(data:image/webp;base64,UklGRtYBAABXRUJQVlA4WAoAAAAQAAAAIAAAIAAAVlA4TGEBAAAvIAAIELfAKJKtRp+c4UhxzB7wrwYLadcGmwAAk8zdgdsLEIH+GbyAvK42kq3k4w7hj4nogP7boQKX+Q8A4P9/RAlAABCYQwUl9YWLd1rYI35I9OT21aUSaZ3sfFmiuf7IRRZHxDZJ98b4C8CSbTtKFXTbXLg3B9Dr/OcaQl77H9H/CSj/M90v4/TXAFJmpuYrfAVI2dZlWZ8wBsq2Lktd13WGEVD267rWFIxZL2tNGwKBZebrIA0EAzaB7a/apE1gQwKUXQEakykzX6/Xkpkyjc0AurbKzByhe3l/ps/7okydoesO7880TZ83KQlKKXTdIyLomyQ74dE6Hg6SNEuSQTlwj9bxaJDmWWZAOYSICIcedr8bQOl5RODhhEMutA8oxwAeQUQQoKwCM+vBnuCBhx9Idg62PQXhgIeDGUjnJINo3W83AEmCcgxm4O5+u3G+9GlvN7qlU842x+Xrm/KfAwBQU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
+                "kind": "misc",
                 "name": "Bomb Bum",
                 "description": "Costs 1 bomb to play.\n\nCan consume a  Golden Bomb to guarantee the final payout.\n\nHas explosion immunity and can only be destroyed by Mama Mega!, Mega Bean, Mega Mush and Larynx.\n\nPossible payouts\n\n• 1-3 pennies.\n• Random heart.\n\nFinal payout\n\n• Item from the Bomb Bum item pool.\n\nWhen bombed\n\n• Spawns 6 Troll Bombs around the room.\n• His own Troll Bombs cannot make him spawn more bombs.\n\nWhen destroyed\n\n•   +35% chance for an Angel/Devil Deal.\n• Drops several random pickups.",
                 "unlock": false
@@ -68,6 +77,7 @@
             {
                 "index": 9,
                 "bg": "url(data:image/webp;base64,UklGRj4CAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAVlA4TMoBAAAvP8APEH+gIACAItvWqIa3qR2KIklq7n6JnPliDWuowguU0gBAGqDNSANHM9m92rM8wTr/AQAAgvST/9BZyQYX50Nwqz1IYjWGdr9Xr7unZQ91FsiRtj2NJNf4BIMXoFjVX9WgYZiZcXn3AgOqjpfc8eC/tRcYpR0uY8TMDNkOKVwYtH45mzCi/xPgHKoLHGwPsa4t8fzj2tqnj68+whYe4sA7vmvLBzQA2AsAHQLwrJVDb29Do9yah+0/N6DhWQtwQ9dAw7ena7IaN+AlAGzrEOVJ6O3tmgS8LLLbV5BAOYA/ADxrHoAsAN/aBxz43LMl7nx8eP/h/Y8P4dhGrGtNxDgJioEhOImKaZnUwIg9MF2e4ICHZmncUu5ycHKBiD6sra2tfbpMRKeQYyZSzatKja8V5ebm/jqilGorS5mheUEpNf57bf+UUupSY7lr1r24qtT4/Qf7h5VS1OQzuojdxpkcij9/PhodHRoa8hhnpqXprJTyZLmZeHY2IsNloszzlGP2fZ7iM1GaiL6D8Xye0vJidCCRHBl5zrlzlpaJaIUOTtMdzvPpodllylBsNPKcNbBMaSkjQ940cXmS/ZrhFINd7DIED85hOVBTQUlOAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEAAThCSU0EKAAAAAAADAAAAAI/8AAAAAAAADhCSU0EQwAAAAAADVBiZVcBEAAFAQAAAAAA)",
+                "kind": "misc",
                 "name": "Shop Restock Machine",
                 "description": "For the cost of 1¢, has a chance to reroll all item pedestals in the room.\n\nIf used inside a shop, it won't reroll items that are not part of the shop (spawned via another mechanic). It will also reroll the pickups inside it, and empty shop slots will be refilled.\n\nAfter the 4th reroll, the machine has a chance to break with every penny inserted, and a 50% chance to every subsequent reroll.\n\nCan be used to restock the shop in the Mirrored World.\n\nWhen destroyed\n\n• Spawns 0-3 coins.\n• Rerolls all item pedestals.",
                 "unlock": false
@@ -75,6 +85,7 @@
             {
                 "index": 10,
                 "bg": "url(data:image/webp;base64,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)",
+                "kind": "misc",
                 "name": "Greed Donation Machine",
                 "description": "Appears after defeating Ultra Greed in  Greed Mode.\n\nTouching the machine donates 1¢ to it, incrementing the displayed amount of donations.\n\nDonations persist between runs and contribute toward unlocking certain achievements.\n\nEach donation has a chance to jam the machine, which is shown under the health bar. Each character has a separate jam chance that persists between runs. Modded characters always have a 100% jam chance.\n\nThe jam chance maxes out at 20% at 200¢ in  Greed Mode, and at 1% at 55¢ in  Greedier Mode.\n\nDonating the 1000th coin will drop ~12 dimes, and reset the total donation amount.\n\nThe machine is immune to any type of explosion and cannot be destroyed in any way.",
                 "unlock": false
@@ -82,6 +93,7 @@
             {
                 "index": 11,
                 "bg": "url(data:image/webp;base64,UklGRpICAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAVlA4TB0CAAAvP8APEK/ANACANLg06JpoJJ7idqozfYNpAIBJ5r6uHywq9v8TGskkIoxi204TZtox7eMgLuJfQmuh0/kPAID//0MJpdEQSmCGCM1or5kcyO+47sS5RaVXM5+4P+K2VRwNq6iDKe8VypQfySBbkiTRSjg9Mj3IggfU///YPUfvLj75NBXR/wl4+r9Z11+GP/0aQF0LvgKU70vsB2VSc5oSu0E5xeBkiHSJ7ZwaJ0cDKL0blDVOjgaaIZfYzKmTo4EGlN4Lyhrn0UAzyyW2cuo8GmiAbqV3grLG0Sc0QHcPucRGRucBNEB3M2S2Aw6A7mYvuBgnB0B3cwc7MOd0AHQ3s5wTW9TVcQLdDdDjwps4hUsncHQDNCqL3KPBIq1xcnQDNENOYfG0JVi4dB7dAA0qixRPG6UngIYh52YpXDrnA4bKIr0L1+kSg3MgyqnrTX4XiHShuXCKdLFNWU6RpmaTIi32sX7gEKTnFIR1uQGX7ySE7iNBn6+aVwEfvOidR96wBkIfb+id9JyzEWm9flcGiBUQ6OWtBcl0mfr1kxAQGSAeBwEIgjSQXIWInE0GiAW/K+re9aeu+/hdS4rwfRpIpYH0fdQak6YwZbIwpO8KU06zJPZcUsRz8q1xXj9j0onvo1jym0hMQlw885dO4jdLikiHHh/OKJaYyNDKyDBrKhDQjwUIapmAfjTAv09APx5gSQP0aoBeCL0e+v9SAFBTQUlOAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEAAThCSU0EKAAAAAAADAAAAAI/8AAAAAAAADhCSU0EQwAAAAAADVBiZVcBEAAFAQAAAAAA)",
+                "kind": "misc",
                 "name": "Mom's Dressing Table",
                 "description": "Randomizes Isaac's appearance based on the set of items he has when bumped into.\n\nUsually appears in Bedrooms.\n\nWhen destroyed\n\n• 99% - 1-4 pills.\n• 1% - random Mom item: Mom's Underwear, Mom's Heels, Mom's Lipstick, Mom's Bra, Mom's Pad, Mom's Eyeshadow, Mom's Contacts, Mom's Wig, Mom's Perfume, Mom's Pearls.",
                 "unlock": false
@@ -89,6 +101,7 @@
             {
                 "index": 12,
                 "bg": "url(data:image/webp;base64,UklGRtYBAABXRUJQVlA4WAoAAAAQAAAAIQAAIQAAVlA4TGEBAAAvIUAIEK+gKJIUZ/EvkOKFg3DhR7LBJgCANDg0oH8WcnC7y1wUtJGk7PpXd2+DmWH+AwD2/4kSEACBGoW1EGU8mU3VbKM8q7ypxXVCNGOpG0Y8+W/fFjivABkgxrZtNXlJNnjC5XjJ9dl/sfy1gYj+T0C7FtrdADfB8Ibbxj8w3ATjMIxwzzAOw/8C3uN7GN/ARcCPNg1cAt8/87IhGS4Aa1rmZUuGU2BJ86RpS4YLytIsLdMiuc6BH2BJmpdZfoDhTAFlTfMyL98F1AWSAF6v5+v5qiqfc1l8PQAeX0zSFRwuyWfYra3y+gC7meBaldfQWmvsZkZEwMcH60hGRKdHRII/OwVtKzMiOtA38Md2FdC2ISI6GckWVVUA7UBGkLEJEutfaLsAB8CSoaoOgATRyUgSbNcJsGTIDvRMqAL7hF2Q2emZvQPYNrRdqILMzN453g6y7p3dttMOr7bbjat2PQBQU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
+                "kind": "misc",
                 "name": "Battery Bum",
                 "description": "Costs 1¢ to play.\n\nPossible payouts\n\n• 1-3 charges to Isaac's active item, able to go over the normal charge amount, up to a maximum of 2 full charges.\n• Micro Battery\n• Lil' Battery\n• Watch Battery\n• AAA Battery\n\nIf holding multiple active items, priority will be given to charging them regularly before overcharging.\n\nFinal payout\n\n• Random item from the Battery Bum item pool.\n\nWhen destroyed\n\n• Drops several random pickups, a pill, or a trinket.\n•   +35% chance for an Angel/Devil Deal.",
                 "unlock": false
@@ -96,6 +109,7 @@
             {
                 "index": 13,
                 "bg": "url(data:image/webp;base64,UklGRnQCAABXRUJQVlA4WAoAAAAQAAAARQAARQAAVlA4TAACAAAvRUAREH+goJGk5vvTu3fEIA4bSiPZan4GVJY4OqH/cnBRUSNJytKbwf0qOXE3/wEA/v8xoBnCaa1FxcS4grwVERER1sk6ywe667z5QIq0bYok/ZFnGD8ZbzOqPUHHMjPJgVxGO67VkqIGu7wVo5aZFJUa27EMbvoQlVnVf40bF9F/Bm4bKUqXj3L0CVmNBhELGBFygK9gyAUzveGxMnmwviYpY/JsCOrwGDmqnRmGKesbmJkLWK8G4P+45+fj06hHr5gaX0/Y9Gs72tG3b/kaGH37luBSy07Fqzc0Hib0agBDFXap9ep3exnnatNAT8fD1mjc/taYceuBjisbFW8eLj/81ug4V4Q5V1Rx/luj/e3bAnPOZ73ydYzeLHlYm7AWo+Tbt1cLFWDt2rWAjmfBaMgaoHC1ZkS1oQLMDMtrkxR7uq/QAtgZVwyYuKM1IcYidFjr3Ppip2gSn4yRJfW34RfSMZLhk6kzmQk6N6Moqmc7eLIduBn71LGZDiLZDsQBi4jewd4MietG72A/pmgaUTvwJSRaRNQOROz+EgcXELUDddgdl+AmonUIuBnVA1QOK8e+fZHPvn2I2oF9Ebv3lYgS1A7s5s5hPyshagcL1dKF3V0wonfgY/wxbsZNRPQOtnsl4VPVSB4H6MZVEMnjYFPfdz4HscFvr3ZYCVaREVBTQUlOAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEAAThCSU0EKAAAAAAADAAAAAI/8AAAAAAAADhCSU0EQwAAAAAADVBiZVcBEAAFAQAAAAAA)",
+                "kind": "misc",
                 "name": "Hell Game",
                 "description": "Costs half a heart to play. Prioritizes red hearts first.\n\nStarting from Chapter 4, costs a full heart to play.\n\nNot having enough HP to play can kill Isaac.\n\nWhen given a heart, the beggar will lift one of the skulls up, revealing a  Black Heart, Blue Spider, bomb, item, key, coin, or card. He will then shuffle the skulls around and wait for Isaac to bump into one of them, which will result in a payout.\n\nThe skull Isaac bumps into is not relevant.\n\nLeaving the room before bumping into a skull will reset the prize.\n\nIf a Devil Deal has been taken during the run, there is a 25% chance that a  Shell Game will be replaced with a Hell Game.\n\nPossible payouts\n\n• 2 of the previously shown pickups, 1 if it was a Black Heart or a card, or 2-3 if they were coins.\n• Enemy Spider.\n\nFinal payout\n\n• Random item from the Devil Room item pool.\n\nWhen destroyed\n\n• Spawns 2 Enemy Spiders.",
                 "unlock": "Unlock: Defeat Mega Satan as Tainted Azazel."
@@ -103,6 +117,7 @@
             {
                 "index": 14,
                 "bg": "url(data:image/webp;base64,UklGRmoCAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAVlA4TPUBAAAvP8APEJ+gKJKk5sjxzT/jACnYRkzGCdPYthqRs8VlUGgU/Q+V0ELadWoiSYr2LnpjJHAOkIJtxPxk8x8AAACCgNYbawKCZNaJC+LF83FaYvnuc3+BJxt76KO79pJNlFXVnBSQZNuK2+inc4dMrOx/tZKwQKPM3v0vov8TMP1Hx/FjRO9uAcz1eAfQJ3Bd+uKgj6Vy72lp7hKo3in7T+nHRngf6hL0ubv1iW0ksWczVD6FhdvHsnkOVw9AEk11pJSwEW6kX2bee2Zmr0E7EMzuZMPUpzqYGiNLMjUGdbCg2HCegCwJnCWoBFSCs9Ql1qqnkZggpNPUnXoadjgLwQZMZ2FnOk9jwEQwTkBLtA+yPQVMEFx2HpchvLr9pti/XHPjkTlEdaDfzBTS6nK1E3Jr7ueVVmu4XDPtzMflkZeBGvPNIYbs9FMOfJWX7fIq6+zXSmva6dzs9kHjXJdtHO2d7LprybG25Lpr98l03bWN/rYXbG+Bg+Mybe8AbqXRdtBBUpVAb/4tf5KWv2U7e3yNGV38vlzfj+yj2NdGXd4n6BKtGz4y87jPQwTIAmQB6qIDMD+vZCZfyUy+ki6fxxSbmWIzU+xOUngfSWLmpyQzWZKZLNmDzMz43o9NC5AFyALk5DBWb+tIOgBNE5DvBzANHUdO/4sAUFNBSU4AAAA4QklNA+0AAAAAABAASAAAAAEAAQBIAAAAAQABOEJJTQQoAAAAAAAMAAAAAj/wAAAAAAAAOEJJTQRDAAAAAAANUGJlVwEQAAUBAAAAAAA=)",
+                "kind": "misc",
                 "name": "Crane Game",
                 "description": "Costs 5¢ to play.\n\nThe machine will display one random item from the Crane Game item pool, and can give up to 3 items before exploding.\n\nBumping into the machine has a 25% chance to pay out with the displayed item, and 75% to do nothing.\n\nCurse of the Blind! affects the Crane Game item, when displayed, and when won.\n\nIf all items in the item pool have been picked up, the Crane Game will only dispense Buddy in a Box.\n\nWhen destroyed\nDrops several random pickups.",
                 "unlock": "Unlock: Defeat Mega Satan as Tainted Samson."
@@ -110,6 +125,7 @@
             {
                 "index": 15,
                 "bg": "url(data:image/webp;base64,UklGRggDAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAVlA4TJMCAAAvP8APEH+gJpKt5scqWaBDAP7lUEKVpaiJJEm5exDAHj77+P0LYoZSI0lScne4a0zx/+9ZRFHzHwAAABaXpfWEcya0cbtVFvdM3Wj+6bdLw9P+dyLoYzDI2f8/baP4HVhuSsd2eezDHZNHPSYn1XDMPPH7qBsNGnIjMzNtODLfjdjxmO2c5bs38PtF9H8Ccv+6oJONK8iMXo1n44rR3YJZkKEinSzGl6vxKZm8Xq7GmzNRAOozGVFAPgtXhIrM/T9kAh1bpMyHSsi8cOy4QptYxdQLO9QGzaES2qDeseGGi7SZVRguKG0WCRvUMECeFQNt6h0bBnj0LA6g2YIbLjLPqpJk5Vl1EYUN9WyWTH60DBYY3pslGQjPL0o+UsJJ4wo1T9ITN643iaLksnqRhrwn6RXydzBJiqK8Wy+cv3MLwsjWgmy9fseXBCvNBZFiNJwlPZKYVCTzRS4atdDqBwD8AIBvIwCKsnYARKmepa6mERWDqolXH8EAECngigAeyQAeyQAec2ljAUoKCOAF8Bw7pTbSV7bKqi7oEhvWN/pdXlnVWVDltsjbsJ5sjAJVrrdRasPW9SR3+W2qZCVqq98QY6M9b31iQ6DtlNq2Ju3yVWRDR1mpqO140hlfW9uScDGDA5vPXFi/54KvSzZ0jHt4IRZlwS9XbY21Hf959MBPxsasRLWO+jqyMta2KumAr8cs8UPDqp+80GDLtJHkh82CvjaWAgAkABtuOCxbzbPEapekEqkK2rSZeBWmS5vhVCAD9NRsgSecdGpRm9ImrtoU6y1oU69qUhtLPSQV+lhnraSAHpbh2XDDHo509ySjl2WRqttgSNTsNhhK5/ewpRZ62JIKJOnkkknSSQXSydUmndw/CwBQU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
+                "kind": "misc",
                 "name": "Confessional",
                 "description": "Costs half a heart to play. Prioritizes red hearts first.\n\nStarting from Chapter 4, costs a full heart to play.\n\nNot having enough HP to play can kill Isaac.\n\nHas a 30% chance to pay out on Normal Mode, and 25% on Hard Mode.\n\nPossible payouts\n\n• 5% - explode (cannot hurt Isaac), and spawn several random pickups\n• 3.3% - explode (cannot hurt Isaac) and grant the final payout\n• Removes a Broken Heart, if Isaac has one.\n• 50% - Soul Heart\n• 10% - Eternal Heart\n• \"You Feel Blessed!\": removes the floor's curse, grants   +10% Angel Room chance, and allows Isaac to find an Angel Room even if a Devil Deal has already been taken. If no Devil Deal has been taken, the Angel Room becomes guaranteed for that floor.\n\nFinal payout\n\n• Spawns an Angel Room item, or Redemption if a Devil Deal has been made during the run.\n\nWhen destroyed\n\n• Spawns several random pickups.",
                 "unlock": "Unlock: Defeat Mega Satan as  Tainted Bethany."
@@ -117,6 +133,7 @@
             {
                 "index": 16,
                 "bg": "url(data:image/webp;base64,UklGRrwBAABXRUJQVlA4WAoAAAAQAAAAIAAAIAAAVlA4TEcBAAAvIAAIEF+gJAAQBCLJo37h/x22KIYkidna1zJcMDiJ8+dIGIoaSVIWjpnBy/l3dP/5DwAAweyL3IoZ8L+15j0LBgzlU7p6AEfa/jXK73+DvBuHCm7gUm6FdC7lLvCfSYmmTodUDr8Sh3+3HTM5nmEXiOj/BMj/xnwHoB1cRtCGorxUi2nyKMvLOc1oovi6GMtUI9NUlsMTqppR5w2SQaKqaltAT1X3NDQ1MN65u1ON0qhhm8tt9jRdTuu8W82Au7DFMhFweRlFdcAyIxM9zcIKQM52SE8tIgC5c9zNzandqHl3wYuLe3ba2tCIkLslui7GTtsQEfEeXfAeu5jl0Q6msu/2nXMoFIiIQGWop9EgqXiX6WPwHsc9GxZFhbuMebo565QXNXaDPDiaDyhOEyMi3nK4n88H1EoVugFgAFPjARhp7WHkjwMAUFNBSU4AAAA4QklNA+0AAAAAABAASAAAAAEAAQBIAAAAAQABOEJJTQQoAAAAAAAMAAAAAj/wAAAAAAAAOEJJTQRDAAAAAAANUGJlVwEQAAUBAAAAAAA=)",
+                "kind": "misc",
                 "name": "Rotten Beggar",
                 "description": "Costs 1¢ to play.\n\nEvery 3rd (sometimes less, rarely 4th) coin donated will result in a payout.\n\nRotten Beggars have an 8% chance to replace  Beggars.\n\nPossible payouts\n\n• 1-3 Blue Flies\n• 1-3 Blue Spiders\n• Bone Heart\n• Rotten Heart\n• Fish Head\n• Fish Tail\n• Rotten Penny\n• Bob's Bladder\n• Fart\n\nFinal payout\n\n•   +10% chance for an Angel Room.\n• Item from the Rotten Beggar item pool.\n\nWhen destroyed\n\n•   +35% chance for an Angel/Devil Deal.\n• Spawns 2 Small Maggots.\n• Chance to drop a Rotten Heart.",
                 "unlock": "Unlock: Defeat Mega Satan as Tainted Apollyon."
@@ -128,12 +145,14 @@
         "data": [
             {
                 "index": 1172,
+                "kind": "misc",
                 "name": "Guppy",
                 "description": "Obtained by acquiring any 3 items with the  guppy tag.\n\nGrants Isaac flight and spawns a Blue Fly 66% of the time when a tear hits an enemy.",
                 "unlock": false
             },
             {
                 "index": 1173,
+                "kind": "misc",
                 "name": "Beelzebub",
                 "description": "Obtained by acquiring any 3 items with the  fly tag.\n\nGrants Isaac flight and converts small enemy flies into Blue Flies.\n\nLarger enemy flies such as Boom Flies, Pooters, Suckers, Moters, will become permanently charmed and follow you between rooms.",
                 "unlock": false
@@ -141,30 +160,35 @@
             {
                 "bg": "url(data:image/webp;base64,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)",
                 "index": 2,
+                "kind": "misc",
                 "name": "Fun Guy",
                 "description": "Obtained by acquiring any 3 items with the  mushroom tag.\n\n  +1 full Red Heart container.",
                 "unlock": false
             },
             {
                 "index": 1175,
+                "kind": "misc",
                 "name": "Seraphim",
                 "description": "Obtained by acquiring any 3 items with the  angel tag.\n\n  +3 Soul Hearts.\n\nGrants flight.",
                 "unlock": false
             },
             {
                 "index": 1176,
+                "kind": "misc",
                 "name": "Bob",
                 "description": "Obtained by acquiring any 3 items with the  bob tag.\n\nMakes Isaac leave green poisonous creep on the ground that deals 20 damage per second.\n\nGrants poison immunity.",
                 "unlock": false
             },
             {
                 "index": 1177,
+                "kind": "misc",
                 "name": "Spun",
                 "description": "Obtained by acquiring any 3 items with the  syringe tag.\n\n  +2 damage.\n  +0.15 speed.\n\nSpawns a random pill.",
                 "unlock": false
             },
             {
                 "index": 1178,
+                "kind": "misc",
                 "name": "Yes Mother?",
                 "description": "Obtained by acquiring any 3 items with the  mom tag.\n\nGrants a stationary Mom's Knife that trails behind Isaac and deals 2x Isaac's tear damage on contact.\n\nThe knife synergizes as the item would.",
                 "unlock": false
@@ -172,6 +196,7 @@
             {
                 "bg": "url(data:image/webp;base64,UklGRmoBAABXRUJQVlA4WAoAAAAQAAAAJgAAJgAAVlA4TPUAAAAvJoAJEC9AEEBS/l4jPM4aZNI2fetf3hyMeRhBts3mz3WF6Xz+A/C/KpkuawArtu26zZ3LIAmBmy2ZgI5CQLoh4Jo/GUd9t98R/Z8A+48G4B8Jzv6+YGRmxd/F0Lnynhh6Xf0d9MVkFUPr6qv2jrKiv2PyGVrA3t9R/RRkhS5pQn9F17zSJJULY8PNYkiqqx0wi6ZbK7RCK0BXdaOrnIACXZoYd0mFfr3cJ0O3JgwmeksByodKU3U66P334jHqyL54qA6qx5557PniGIJZ3XgesHdJc9v75MAsgGDPzA2emZubGZgFZ489N2wdgJsB/o5l4PaXAwBQU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
                 "index": 7,
+                "kind": "misc",
                 "name": "Conjoined",
                 "description": "Obtained by acquiring any 3 items with the  baby tag.\n\n  -0.3 tears.\n  -0.3 damage.\n\nCauses Isaac to shoot 3 tears simultaneously, of which 2 are fired diagonally.",
                 "unlock": false
@@ -179,30 +204,35 @@
             {
                 "bg": "url(data:image/webp;base64,UklGRmoBAABXRUJQVlA4WAoAAAAQAAAAIQAAIQAAVlA4TPYAAAAvIUAIEC9ApG0bm4XBHV5p2wZsqrCofBJp28ZmYXCHn/8AgPxPKWcZQKhtN24kMfBzHABuOwASlUAWA0iPxR9MlMxGIKL/EyD/NwF6K3HWG4ll3/eCXrH4uXCRFo+LRnQvi5fFG0Fa3DNOdS8aHF9HMH7GgP71ea3+Wr8+jcDvntLUWIJCH/Q0QgBHVG4s0XBjCqqxBAXLKiJY97gZcpq3i/czSJNtwdsGDaqZdW9mllUkiTBb/EREUaFeZCRxkCo1yGRlXMAy1cwy1aAc4zRb5lztORwj/f3sJVjavDXozRtypntvJHpDg0RvqABIDCAiINcgfxJQU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
                 "index": 8,
+                "kind": "misc",
                 "name": "Leviathan",
                 "description": "Obtained by acquiring any 3 items with the  devil tag.\n\n  +2 Black Hearts.\n\nGrants flight.\n\nCan be obtained as a rare reward from Sanguine Bond.",
                 "unlock": false
             },
             {
                 "index": 1181,
+                "kind": "misc",
                 "name": "Oh Crap",
                 "description": "Obtained by acquiring any 3 items with the  poop tag.\n\nCauses Isaac to heal half of a red heart each time a poop pile is destroyed.\n\nHas a 6.66% chance to activate The Poop every time the timer hits 00.",
                 "unlock": false
             },
             {
                 "index": 1182,
+                "kind": "misc",
                 "name": "Bookworm",
                 "description": "Obtained by acquiring any 3 items with the  book tag.\n\nCauses Isaac to fire an additional tear 25% of the time.",
                 "unlock": false
             },
             {
                 "index": 1183,
+                "kind": "misc",
                 "name": "Adult",
                 "description": "Obtained after consuming 3 Puberty pills.\n\n  +1 full Red Heart container.\n\nMakes Isaac's voice deeper.",
                 "unlock": false
             },
             {
                 "index": 1184,
+                "kind": "misc",
                 "name": "Spider Baby",
                 "description": "Obtained by acquiring any 3 items with the  spider tag.\n\nSpawns a spider familiar that slowly walks towards enemies and applies random status effects upon touching them.",
                 "unlock": false,
@@ -210,18 +240,21 @@
             },
             {
                 "index": 1185,
+                "kind": "misc",
                 "name": "Stompy",
                 "description": "Obtained by acquiring any 3 items that increase Isaac's size, such as Leo, Magic Mushroom and One makes you larger.\n\nGrants Isaac the ability to crush rocks upon touching them.\n\nUpon taking damage, Isaac has a 20% chance to create a circular rock wave that deals 20 damage per second to any enemy caught in it.\n\nThe rock waves cannot destroy machines.\n\nCauses Isaac to create dust clouds as he walks.",
                 "unlock": false
             },
             {
                 "index": 1186,
+                "kind": "misc",
                 "name": "Super Bum",
                 "description": "Obtained by holding Bum Friend, Dark Bum and Key Bum at the same time.\n\nCombines all 3 aforementioned familiars into Super Bum who automatically collects all coins, red hearts and keys off the ground and drops twice as many rewards as the regular bums would have.\n\nThis also applies to items, as 2 items will be dropped whenever one would.\n\nA unique animation plays when the transformation is acquired. See the video link below.",
                 "unlock": false
             },
             {
                 "index": 1203,
+                "kind": "misc",
                 "name": "Necromancer",
                 "description": "Obtained by acquiring the following 3 items and trinkets: The Necronomicon, A Missing Page, and Missing Page 2.\n\nChanges The Necronomicon's display sprite and gives it a special purple charge bar that can be used 10 times per floor.\n\nAfter the 10th use, The Necronomicon gets back its old sprite and the charge bar is reverted to the usual 4-pip bar, but fully depleted.\n\nThe purple bar is restored when traveling to the next floor.\n\nThe Necronomicon cannot be recharged normally while the purple bar is active.",
                 "unlock": false
@@ -233,157 +266,193 @@
         "data": [
             {
                 "index": 1135,
+                "kind": "misc",
                 "name": "Isaac"
             },
             {
                 "bg": "url(data:image/webp;base64,UklGRkgCAABXRUJQVlA4WAoAAAAQAAAAJgAAJgAAVlA4TNQBAAAvJoAJEK+gKJLkZINe0EP+UZwnGyEVZENRJEnNkR3k8MoG8ApO0IIEfhhAVSQ7zUvoVjCAcX57EUKMZP4DAAD8XxFBgKGfh+4AQAiChJrxhOyOktmZ5H8AqGirPT53hUqJj0VYkwGyJElWm20bZCPrxfTw/x+7u0gnn2si+j8B7X8t6ASfEjTQsGn4Cc0NAgyCJt4QGAROwHICVn9KOAHLOVQOLQ44IZx9KCcehGo/4Ez2lkcCJ4Rqrzoh3Bkl4ER1MNwP9gMGghzEQE7tVQf7AdRMeBTCA1T7UdQOVcdIOOQEyyixYgDsB1XFJARO5ERJiBC1V3EU44YIOVGiDDmtYVUVfRhEEzix0nKCQ2wIqoAwcmL1ScgZIgCx9epNokgYRAKh6bYON0EkCMyAcAg21jc30aUVoolQf12A26wW+FYkVgoawoTYlq8CZksViEiISWJx+8i3pq1z0g1XFmBlGV5FwACRWNfJMpyUTIg2ciKqq3X5qirWW1cvJTNEpHW7VN1WluFKXapuIkO0qQjr9VO1nq6ql9KinRRh3S+/5y4/D2G9Q6DH5XamLk+RihQzEanQwvM2q8eCiMTn0nTwdxv+QUcg2kn1jeXNhvr22Vn7VwNQU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
                 "index": 1,
+                "kind": "misc",
                 "name": "Magdalene"
             },
             {
                 "index": 1137,
+                "kind": "misc",
                 "name": "Cain"
             },
             {
                 "index": 1138,
+                "kind": "misc",
                 "name": "Judas"
             },
             {
                 "index": 1139,
+                "kind": "misc",
                 "name": "???",
                 "path": "%3F%3F%3F_(Character)"
             },
             {
                 "index": 1140,
+                "kind": "misc",
                 "name": "Eve"
             },
             {
                 "bg": "url(data:image/webp;base64,UklGRtgBAABXRUJQVlA4WAoAAAAQAAAAIQAAIQAAVlA4TGMBAAAvIUAIEI+AJpLU3GuAihrxKIIaISQ2lEaSFO3JS+DkfxAK4RIYhUWjJgCQhr0K0MHu1iGIlx/zHwAA+P8SI5Py0vkzoW3nU3WBJUK3vr5jzsh9ACQCBlmSbcdtgytA72kgaGf/y8Uj5Ez/50b0fwLa/1dlQ+UP6Cc/0BppO8BpO4AtgfOSyDpgQzg38XXAhnMND5xyDOwPRNqOcqxeER8AjA203hFbD/OhbdgK4M5jG3HnQkQG94fNto3WKs31wzbXkQEN4QycJaXLIG0DRAa4xhngeoklgyFOtCaciBMBkYYmzBD95m6f4jxs+s3dFltnLw9324d7ycbY6eVOFPbQOZd59JvtfsxlolgQNswX+HAvD0/AIqBVQ+cTjm3g1KgQHuLX673H81sEtFJmiO/X3Jl8iRFqF2mG6F/zan53MdKVKFC3z1nSrQoKB2vfZ4hIFwhoortxBWJobaVoP6my/UcBAFBTQUlOAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEAAThCSU0EKAAAAAAADAAAAAI/8AAAAAAAADhCSU0EQwAAAAAADVBiZVcBEAAFAQAAAAAA)",
                 "index": 6,
+                "kind": "misc",
                 "name": "Samson"
             },
             {
                 "bg": "url(data:image/webp;base64,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)",
                 "index": 7,
+                "kind": "misc",
                 "name": "Azazel"
             },
             {
                 "index": 1143,
+                "kind": "misc",
                 "name": "Lazarus"
             },
             {
                 "index": 1144,
+                "kind": "misc",
                 "name": "Eden"
             },
             {
                 "index": 1145,
+                "kind": "misc",
                 "name": "The Lost"
             },
             {
                 "index": 1146,
+                "kind": "misc",
                 "name": "Lazarus II"
             },
             {
                 "index": 1147,
+                "kind": "misc",
                 "name": "Black Judas"
             },
             {
                 "bg": "url(data:image/webp;base64,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)",
                 "index": 13,
+                "kind": "misc",
                 "name": "Lilith"
             },
             {
                 "index": 1149,
+                "kind": "misc",
                 "name": "Keeper"
             },
             {
                 "index": 1150,
+                "kind": "misc",
                 "name": "Apollyon"
             },
             {
                 "index": 1151,
+                "kind": "misc",
                 "name": "The Forgotten"
             },
             {
                 "bg": "url(data:image/webp;base64,UklGRvIBAABXRUJQVlA4WAoAAAAQAAAAKwAAKwAAVlA4TH4BAAAvK8AKEJ/ANJJkVXdPv3qK0XP+UdH/jtNQE8lW8xOpzGVsEYB2pGADA7AJACAN7hrAT8LQvwQEgMn8BwDw/z86iC2ND8vUSN1Jla5rBABCBM69Xf4YbklloM+KMyGHA4AQAQMkR5IkRUzv3ezw/89SkVk5nDiGR/Rfgds2SrceQw8fcfrtbGj2TTHAV9QA0+wJ+IIa0WKRc6rKKWix+5gdPWcnqAmqySaxwkJFSGTBck1pPI0Da9xxi2QRMjpEGkcuoiFAE0vzdF+agg7HYey5QwSagozn1EESDdBSXd6bhyUnCRkpP5dJ+Ph4S+TnF8e1w0weh0awJmTN3dsrsaGlGmNC1aTPIoIzIRUTPjOk14rsfnJpkm8RHuAjJbvHOAV/BiJUhaLw9KqgAr2ECEI/tbX40COykfpBoUkb2yZpUsPE7Ql+xACRIQPV/GU/UrMtLOJ4vnM8X3sVBtiftwx+bknr4iDbLeE+CMuQgutNDCmpw9h0zO7yH9/v72IGUFNBSU4AAAA4QklNA+0AAAAAABAASAAAAAEAAQBIAAAAAQABOEJJTQQoAAAAAAAMAAAAAj/wAAAAAAAAOEJJTQRDAAAAAAANUGJlVwEQAAUBAAAAAAA=)",
                 "index": 17,
+                "kind": "misc",
                 "name": "Bethany"
             },
             {
                 "index": 1153,
+                "kind": "misc",
                 "name": "Jacob and Esau"
             },
             {
                 "index": 1154,
+                "kind": "misc",
                 "name": "Tainted Isaac"
             },
             {
                 "bg": "url(data:image/webp;base64,UklGRhoCAABXRUJQVlA4WAoAAAAQAAAAIgAAIgAAVlA4TKYBAAAvIoAIEH9gEJKU+wfIII7cA0gggFDSMFrbxvvROrY3i0TVJI2iSFKjXU6z2ORH8UJJDGT+AwDw/5PRZHMkIAnWV97pFTHj+qkqQBJAbrRtjqR8U5NAf7XWVLe1JHDHj9YwfSIAlKchkdPntflXD1rjtdnoMVd4hKASGYGIIKL/E4C/bQBD/hHJYhyZNHOMIRlU7RgmtVG14oAxSWdWO0UfGDUlzVolDmkOQWdqgzUwAEzSKgat1MZqggIAg1YatcoLdRNTAKYN0TKp/dgoz00AmNQEFyt1n8KszQKAnxYhqc3k0jV6tgToGIJtF3y//zHq6U7KodXsnh16vx+zgAwauHQ89N777SigBhcteeh7t8+WJraaHWXTe78tsnmqNC2XS06l9t4fm0p9qgRJro7Y6iwdz4jUx6Q+JrJ1pgSbzFMitYh0BGCjPBTZPDI9ui3yVgATlFvXdryI+JvXTpWAadW9eLjuu/cfnikB8JNdvbXRc/W3AIBpF/yx03PzfNnDj5Tvm9777QuCLu2CK/Jif3//jJR96gpIP3oNCWBFREoMssD/D1BTQUlOAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEAAThCSU0EKAAAAAAADAAAAAI/8AAAAAAAADhCSU0EQwAAAAAADVBiZVcBEAAFAQAAAAAA)",
                 "index": 20,
+                "kind": "misc",
                 "name": "Tainted Magdalene"
             },
             {
                 "index": 1156,
+                "kind": "misc",
                 "name": "Tainted Cain"
             },
             {
                 "index": 1157,
+                "kind": "misc",
                 "name": "Tainted Judas"
             },
             {
                 "index": 1158,
+                "kind": "misc",
                 "name": "Tainted ???"
             },
             {
                 "bg": "url(data:image/webp;base64,UklGRsoBAABXRUJQVlA4WAoAAAAQAAAAIQAAIQAAVlA4TFUBAAAvIUAIEH+gtpGk5j3ekxGR0n9/tKEmAJCGPX4iQANC2D+EvwlU20hS8x7viUjJ6L8/5j8AAAD8/8NEzRsfHhExM7u2s4dvr9yin+a+y4/z6gHcaNsbKb+GBvThfqVcBRzCe0qgCRf+kZRupC+C3EMpNxRCBz69GafdZeggov8TIO2Ak94eADxclwdSUgCuA5bIbEnhWrzlQrKQihaUzE51IuKNHdlyhUIyk5kMDXoFkggi3kgykMrCgD8EZieCRLIoM0puCBFkko0ywZJRnSCUKukrzlYYnFhgC+7iEhicbwJZTDE6GMQlBgdqaRlXSR2gOTWm8fcgxiWqEyiTGWJsgQi00GxtsPEY43lqSQkYxvh+fWGVRzWeTCa3NHUdo0mVe4y+qxs1FRFBUhtPJpPPnSVDx/Dt4+PjMPaKrWKu8kllPca4IIIOSGeH9fB/64T7Py/9AQBQU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
                 "index": 24,
+                "kind": "misc",
                 "name": "Tainted Eve"
             },
             {
                 "index": 1160,
+                "kind": "misc",
                 "name": "Tainted Samson"
             },
             {
                 "index": 1161,
+                "kind": "misc",
                 "name": "Tainted Azazel"
             },
             {
                 "bg": "url(data:image/webp;base64,UklGRl4DAABXRUJQVlA4WAoAAAASAAAAIAAAIAAAQU5JTQYAAAD/////AABBTk1GiAEAAAAAAAAAACAAACAAAOgDAAFWUDhMcAEAAC8gAAgQf6CmkRToDrkIxcBbE0RQYkNJJCvUQ+LIQnsikAH/VTTASCQp94r+mjAoLBJNBRL8/AcAgP9GFosmFgAhwXX0rpMy/jaPXvoHYJBb27YaSfcvJaBrdulb1Qlo9WtmBp/JxSxoyGQwGe4fktssV11ZDCQwIehXDyUQ0f8JwP9LgnQ3SRltlzoGZUGZa8dCOgk6oYuxESQFKaMDkJIqJX08CcroQDIL0ok+ygc1HHh26gupoUIVWwTS0heqlKmUMjoALCQv6sVH6YR0YFDLV8XJizJI8g6FWv5F9qJ6wbPT02sCLyry5P4L39HBs2s64AXvG5+X958/Zx0gB5r2kAvH3U17WNb8QNOmDqanIw5Ifb/ZVL9NdZsdRVgzsxodAN4zm+9sdh2bPSMA5EdLt6bNbHp1qT+JPNx+O13f3x6IwLbmIos/DdH8263I6lgSg/2an56ePh41tM3t4d27dwcsaYfc6glumptZgv8XQU5NRqIBAAAAAAAAAAAgAAAgAADoAwABVlA4TIkBAAAvIAAIEHegJpIk5eCZKcP4/Qt8G0ojSYpO/XeO34EiA/LPiCIBFEWS1NwdOWf48sYF/oUgg/kPAAAA//9QkN+OSJwITk9l4LPHdk9i7/XKMV+T1wK52batdfP+lxbQaxCZjxeQ/ZldcYcDYBgqZuakY1CnStbXeohg6VP+bThaQv9xaIGI/k8A/l8SpNmPT2cr37DUuNTYtOIT1azUjMbFpFTVUjWmAeCTektVdy4UGtOAZFyqZrpzISg1MeDrN9GTy0WiTy4c5UMC/q1o+8LRItZbFy6ENAD45PKFQKn5+QsXjpIGLC8fCR4/yfLtQguNDJ7osSCP88c5X7559YhA/pjMtvMoCPj6Pg2Qc6aHh25tn1xsJ0mA3GvYJX6+3mzYpVu1aK9h17e/uAzgR01r18flTNPadQdrIlKjAcBOa9cGG8Od1q4RANJ28pSIhOSQ59glL1RV9YWcdkDOf3FcPypwpgffVrWrY54LcvBnVVVvxwQtU9n99OnTmHitkErdw35TEfHw/wIA)",
                 "index": 27,
+                "kind": "misc",
                 "name": "Tainted Lazarus"
             },
             {
                 "index": 1163,
+                "kind": "misc",
                 "name": "Tainted Eden"
             },
             {
                 "index": 1164,
+                "kind": "misc",
                 "name": "Tainted Lost"
             },
             {
                 "bg": "url(data:image/webp;base64,UklGRhICAABXRUJQVlA4WAoAAAAQAAAAJAAAJAAAVlA4TJ4BAAAvJAAJEHegtpGk5i0Q2chm9EnpXBtqI9lK/v+4S24R/fdCSBNUAGokSUrOkMgl5M8815n/IAAEEP/rNUnaUsZydNyz0Yozm7u6dwdsDWf7b4LcaNsUyfn+DPoVS9N1FIMSoAQwAGa0KAGVMlCdJ0t1Zjuiv51j6K6FEMa+qUlidlcYQET/J0D/62CLBRCBBQKBmdGwGQHYrJW62QA2YGOd7L7pHtlYZ8brLxeSe/bC5/dnZ4g3H1P25DF+eoMkBXjzYTP5pnvzdk4qr892qZD9+PVZTJLI/SjmhlEuXV+RFDa9q0seaWutI48mheRLPQ60o5q8wUR2IHP1FPTJPZrwAmxeevDgImx6QcIblti8/eDBGWgLJpEbIsyY4tGkkBo6gNtnGJGbQdsx6m4DZ0YdqSCJCjxbXTuxB6fnLdX6FPi6V88s4P7gwYMHX7/66c0OKbR1KT8dPPhaGEWT8I7NOZG6ZCJ5Y2zOiLQdEiU1Frh269at0zBaWsIC6RgCQwu17ZdMYdMLCoApjOiRRI2m2aGNmKQAmg9oiC3wrwNQU0FJTgAAADhCSU0D7QAAAAAAEABIAAAAAQABAEgAAAABAAE4QklNBCgAAAAAAAwAAAACP/AAAAAAAAA4QklNBEMAAAAAAA1QYmVXARAABQEAAAAAAA==)",
                 "index": 30,
+                "kind": "misc",
                 "name": "Tainted Lilith"
             },
             {
                 "index": 1166,
+                "kind": "misc",
                 "name": "Tainted Keeper"
             },
             {
                 "index": 1167,
+                "kind": "misc",
                 "name": "Tainted Apollyon"
             },
             {
                 "index": 1168,
+                "kind": "misc",
                 "name": "Tainted Forgotten"
             },
             {
                 "bg": "url(data:image/webp;base64,UklGRiwCAABXRUJQVlA4WAoAAAAQAAAAKQAAKQAAVlA4TLgBAAAvKUAKEI+gNJKt5ied8BkFndIYNeFoQ1EkSc1W3SuS4UVhAA3IwL+UUxPJVvNjRZJA/2sy6EA7bpj/AAAA/PEhI70OViEujNQ7pCOZUjCO9J61zB7m7uH8K0dmkCTZdt02uOYzSegXe//LBUAmo0zPiej/BLT//sz/TuazXL2Xq7OjjxruBO2jM4IDeM8+NbQFTggXQgt9ahah+jLTBuESVJi5MHQz7wFcOAmlgxk7BjsTcNAKg3OewtGB9NHwlGMOLZQM+ZWjg1gOYH5lKAmgohWwAxFAO2CgNOqisrQT+BEOlWVdIqAdMPz8wUB14AjUqlSCHdBa1WEHDKUSWph1SiXAjwB1KJ1ZaDOwRys3S9MNF2roZHy994nn+8XYGWogrDb19WY/9fN+beoK2gUr25ebfvYThO3LTVPHnQqsThkXQK2YPH/Zpp9zU8Fpfp+TdgVWTldwT3kMfPxSNx4DObwSrFA97294fNim8PiGd3qFOsIVejj1c1kNPZeszPZ7+4w6ZhUaEbb9fF/x3Ldw0Ag1gwaBtun+Xrlv2gINwqKNoaH6ek9fmwqhjbN1GngTSPuXK/6HAVBTQUlOAAAAOEJJTQPtAAAAAAAQAEgAAAABAAEASAAAAAEAAThCSU0EKAAAAAAADAAAAAI/8AAAAAAAADhCSU0EQwAAAAAADVBiZVcBEAAFAQAAAAAA)",
                 "index": 34,
+                "kind": "misc",
                 "name": "Tainted Bethany"
             },
             {
                 "index": 1170,
+                "kind": "misc",
                 "name": "Tainted Jacob"
             }
         ]
@@ -393,6 +462,7 @@
         "data": [
             {
                 "index": 1188,
+                "kind": "misc",
                 "name": "Curse of Darkness!",
                 "description": "Makes the floor much darker, and barely lit by Isaac's aura.",
                 "unlock": false,
@@ -400,6 +470,7 @@
             },
             {
                 "index": 1189,
+                "kind": "misc",
                 "name": "Curse of the Labyrinth!",
                 "description": "Makes the floor contain 2 Boss Rooms one after another, 2 item rooms, and count as 2 floors.\n\nOnly the final Boss Room can spawn an Angel/Devil Deal.\n\nCan only appear on the first floor of a chapter.",
                 "unlock": false,
@@ -407,6 +478,7 @@
             },
             {
                 "index": 1190,
+                "kind": "misc",
                 "name": "Curse of the Lost!",
                 "description": "Removes the map from the HUD.\n\nIncreases the total room count of the floor to the size of the next floor.",
                 "unlock": false,
@@ -414,6 +486,7 @@
             },
             {
                 "index": 1191,
+                "kind": "misc",
                 "name": "Curse of the Unknown!",
                 "description": "Hides Isaac's health from the HUD.\n\nDespite being hidden, health works normally.",
                 "unlock": false,
@@ -421,6 +494,7 @@
             },
             {
                 "index": 1192,
+                "kind": "misc",
                 "name": "Curse of the Cursed!",
                 "description": "Changes every normal door into a cursed door that contains spikes which deal half a heart of damage to Isaac.\n\nUnlike Curse Rooms, these doors deal damage from both ways when flown through.\n\n Only available during the Cursed! challenge, or via the CVRS ED seed.",
                 "unlock": false,
@@ -428,6 +502,7 @@
             },
             {
                 "index": 1193,
+                "kind": "misc",
                 "name": "Curse of the Maze!",
                 "description": "Entering a new room has a chance to take Isaac to the wrong room, indicated by a subtle screen-shake and sound effect. This can also happen when teleporting between rooms.\n\nDiscovered rooms can randomly swap contents with another room of the same size.",
                 "unlock": false,
@@ -435,6 +510,7 @@
             },
             {
                 "index": 1194,
+                "kind": "misc",
                 "name": "Curse of the Blind!",
                 "description": "All item icons are replaced with a question mark, making them impossible to distinguish until picked up.",
                 "unlock": false,
@@ -447,11 +523,13 @@
         "data": [
             {
                 "bg": "url(data:image/webp;base64,UklGRmABAABXRUJQVlA4TFMBAAAvMEAJENXIjSTJkaR7jDFGArz+KnbVVJ8Exa4AeVw+Hks6maa+zQizjVN12etMbgLe9I8wbdvE69xsn1zhKa+b5W98y4SXZA0xIhI2vjMCEACwDuHKgE2sKT7+8zzPdGgrWc+zOPFgLVi+QjYh53me+RaC0VdokwBAEiD5bI8AwM7ACOluK+NuJ0jSJUMRdy9fL6u71wqPvs86Dq9r9YBJUpIfs4olkaQ7YALgZAgASZYBYDJAfrU55ncxvy2BgFdHlidq6AQyj2K1xp57FFGrsR95EIs19EOH75Im3G2iqqKjaqk6SPJD+oj/lkoOouRjJNYcVAxYcpDkR3zOnIulqkdR8kEssfjfQceZ8ijJNy+YcWOp7lGUnMYSJzyImYLJCXe7yIz3tsSdQkreeya1ayq9992+XLr7krH31AxLd15nt+N0T8+Y7HT3+HAN9N7jlAIA)",
+                "kind": "misc",
                 "name": "Sacrifice Room",
                 "unlock": false
             },
             {
                 "bg": "url(data:image/webp;base64,UklGRkYAAABXRUJQVlA4TDkAAAAvCMABEApEbdso3zE8/lTW45BORNo2g/Nv4KYm5lAgkMK2vP8TIIha6v27A7UMtT+jX9MoldpAGxUA)",
+                "kind": "misc",
                 "name": "Dice Room",
                 "unlock": false
             }
