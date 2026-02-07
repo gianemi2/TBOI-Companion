@@ -2,7 +2,7 @@
 
 import { Items } from "@/components/Items"
 import { fetchItems } from "@/lib/fetchItems"
-import { BookText, Milestone, ShoppingBag } from "lucide-react"
+import { BookText, CoinsIcon, Milestone, MoreHorizontal, ShoppingBag } from "lucide-react"
 import { useEffect, useState } from "react"
 import { LoadingScreen } from "./components/LoadingScreen"
 import { Button } from "./components/ui/button"
@@ -10,6 +10,15 @@ import { ButtonGroup } from "./components/ui/button-group"
 import { APP_VERSION } from "./constants/AppVersion"
 import MilestonesPage from "./pages/MilestonePage"
 import MiscPage from "./pages/MiscPage"
+import TaintedCainPage from "./pages/TaintedCainPage"
+
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger
+} from "@/components/ui/popover"
+import { cn } from "./lib/utils"
+
 
 function preloadImages() {
     return new Promise<void>((resolve) => {
@@ -20,7 +29,7 @@ function preloadImages() {
 }
 
 const PAGES = [
-    "items", "milestones", "misc"
+    "items", "milestones", "misc", "taintedCain"
 ] as const;
 
 type Page = (typeof PAGES)[number]
@@ -28,6 +37,11 @@ type Page = (typeof PAGES)[number]
 export default function Page() {
     const [loading, setLoading] = useState(true)
     const [activePage, setActivePage] = useState<Page>("items")
+    const [moreOpen, setMoreOpen] = useState(false)
+
+    const isInMore = activePage === "misc" || activePage === "taintedCain"
+
+
 
     useEffect(() => {
         const prev = localStorage.getItem("app_version")
@@ -81,27 +95,77 @@ export default function Page() {
                         opacity: 0
                     }}
                 />
-                <ButtonGroup className=" fixed bottom-4 mx-auto left-0 right-0 z-50 rounded-lg">
-                    {
-                        PAGES.map(page => (
+                <ButtonGroup className="fixed bottom-4 mx-auto left-0 right-0 z-50 rounded-lg">
+
+                    {/* ITEMS */}
+                    <Button
+                        className={`gap-2 py-3 ${activePage === "items" ? "bg-zinc-700" : "bg-zinc-600"}`}
+                        variant="secondary"
+                        onClick={() => setActivePage("items")}
+                    >
+                        <ShoppingBag />
+                        items
+                    </Button>
+
+                    {/* MILESTONES */}
+                    <Button
+                        className={`gap-2 py-3 ${activePage === "milestones" ? "bg-zinc-700" : "bg-zinc-600"}`}
+                        variant="secondary"
+                        onClick={() => setActivePage("milestones")}
+                    >
+                        <Milestone />
+                        milestones
+                    </Button>
+
+                    {/* MORE */}
+                    <Popover open={moreOpen} onOpenChange={setMoreOpen}>
+                        <PopoverTrigger asChild>
                             <Button
-                                key={page}
-                                className={`transition-all gap-2 py-3 capitalize ${page === activePage ? 'bg-zinc-700' : 'bg-zinc-600'}`}
                                 variant="secondary"
-                                onClick={() => setActivePage(page)}
+                                className={cn(
+                                    "py-3",
+                                    isInMore ? "bg-zinc-700" : "bg-zinc-600"
+                                )}
                             >
-                                {page === "items" && <ShoppingBag />}
-                                {page === "milestones" && <Milestone />}
-                                {page === "misc" && <BookText />}
-                                {page}
+                                <MoreHorizontal />
                             </Button>
-                        ))
-                    }
+                        </PopoverTrigger>
+
+                        <PopoverContent
+                            side="top"
+                            align="center"
+                            className="animate-in slide-in-from-bottom-2 fade-in-0 mb-2 w-44 p-2 rounded-lg bg-zinc-800 border-zinc-700"
+                        >
+                            <button
+                                onClick={() => {
+                                    setActivePage("misc")
+                                    setMoreOpen(false)
+                                }}
+                                className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-zinc-700"
+                            >
+                                <BookText className="w-4 h-4" />
+                                Misc
+                            </button>
+
+                            <button
+                                onClick={() => {
+                                    setActivePage("taintedCain")
+                                    setMoreOpen(false)
+                                }}
+                                className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-zinc-700"
+                            >
+                                <CoinsIcon className="w-4 h-4" />
+                                Tainted Cain
+                            </button>
+                        </PopoverContent>
+                    </Popover>
                 </ButtonGroup>
+
 
                 {activePage === "items" && <Items />}
                 {activePage === "milestones" && <MilestonesPage />}
                 {activePage === "misc" && <MiscPage />}
+                {activePage === "taintedCain" && <TaintedCainPage />}
             </div>
             <div className="py-2 px-6 text-xs text-right">v. {APP_VERSION}</div>
         </div>
