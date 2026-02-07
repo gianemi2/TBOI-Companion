@@ -25,7 +25,7 @@ export function RecipeCard({
     onDelete,
 }: Props) {
     const [pickerOpen, setPickerOpen] = useState(false)
-    const [pickups, setPickups] = useState<(number | null)[]>(Array(8).fill(null))
+    const pickups = recipe.pickups
 
     useEffect(() => {
         if (pickups.every(p => p !== null)) {
@@ -35,15 +35,15 @@ export function RecipeCard({
 
 
     const addPickup = (p: Pickup) => {
-        setPickups(prev => {
-            const idx = prev.findIndex(v => v === null)
-            if (idx === -1) return prev
+        const idx = recipe.pickups.findIndex(v => v === null)
+        if (idx === -1) return
 
-            const next = [...prev]
-            next[idx] = p.index
-            return next
-        })
+        const next = [...recipe.pickups]
+        next[idx] = p.index
+
+        onChange({ pickups: next })
     }
+
 
 
     const selectedItem =
@@ -80,13 +80,14 @@ export function RecipeCard({
                     className="cursor-pointer"
                 >
                     <PickupGrid
-                        pickups={pickups}
-                        onRemove={i =>
-                            setPickups(p =>
-                                p.map((v, idx) => (idx === i ? null : v))
-                            )
-                        }
+                        pickups={recipe.pickups}
+                        onRemove={i => {
+                            const next = [...recipe.pickups]
+                            next[i] = null
+                            onChange({ pickups: next })
+                        }}
                     />
+
                 </div>
             </div>
             <PickupPickerBar
