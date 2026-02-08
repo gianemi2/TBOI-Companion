@@ -1,4 +1,5 @@
 import { ALL_PICKUPS } from "@/constants/Pickups"
+import { cn } from "@/lib/utils"
 import { Button } from "./ui/button"
 
 export function PickupGrid({
@@ -23,7 +24,7 @@ export function PickupGrid({
                 >
                     {(pickup && pickup !== null) && (
                         <div
-                            className="w-10 h-10 bg-no-repeat bg-contain scale-125"
+                            className={cn("w-8 h-8 bg-no-repeat bg-contain scale-125", !pickup.bg && "scale-150")}
                             style={{
                                 backgroundImage: pickup?.bg ?? "url(/isaac.png)",
                                 backgroundPosition: pickup?.bg

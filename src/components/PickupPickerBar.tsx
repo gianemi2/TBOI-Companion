@@ -45,11 +45,11 @@ export function PickupPickerBar({
                                     {pickups
                                         .filter(p => p.quality === q)
                                         .map(p => (
-                                            <button
+                                            <Button
+                                                size="icon-sm"
                                                 key={p.index}
                                                 onClick={() => onPick && onPick(p)}
                                                 className="
-                        w-10 h-10
                         rounded-md
                         border
                         hover:bg-muted
@@ -57,7 +57,7 @@ export function PickupPickerBar({
                       "
                                             >
                                                 <div
-                                                    className={cn(`w-8 h-8 bg-no-repeat bg-contain scale-125`, !p.bg && "scale-150")}
+                                                    className={cn(`w-8 h-8 bg-no-repeat bg-contain`)}
                                                     style={{
                                                         backgroundImage: p.bg ?? "url(/isaac.png)",
                                                         backgroundPosition: p.bg
@@ -66,7 +66,7 @@ export function PickupPickerBar({
                                                         backgroundSize: p.bg ? undefined : "38688px 32px",
                                                     }}
                                                 />
-                                            </button>
+                                            </Button>
                                         ))}
                                 </div>
                             </div>
