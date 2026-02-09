@@ -2,16 +2,17 @@ import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible"
 import { cn } from "@/lib/utils"
 import { CAIN_Q, Pickup } from "@/types/pickup"
 import { X } from "lucide-react"
+import { useState } from "react"
 import { CainQualityTable } from "./CainQualityTable"
 import { Button } from "./ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip"
 
-function PickupButton({ p, onPick }: { p: Pickup, onPick?: (p: Pickup) => void }) {
+function PickupButton({ p, onPick, onOpenTooltip }: { p: Pickup, onPick?: (p: Pickup) => void, onOpenTooltip?: (open: boolean) => void }) {
     return (
         <Button
             size="icon-sm"
             key={p.index}
-            onClick={() => onPick && onPick(p)}
+            onClick={() => onPick ? onPick(p) : p.specialPool && onOpenTooltip ? onOpenTooltip(true) : null}
             className={cn(`
                         rounded-md
                         border
@@ -30,6 +31,16 @@ function PickupButton({ p, onPick }: { p: Pickup, onPick?: (p: Pickup) => void }
                 }}
             />
         </Button>
+    )
+}
+
+function PickupTooltip({ p }: { p: Pickup }) {
+    const [open, setOpen] = useState(false);
+    return (
+        <Tooltip open={open} onOpenChange={setOpen}>
+            <TooltipTrigger><PickupButton p={p} onOpenTooltip={setOpen} /></TooltipTrigger>
+            <TooltipContent>{p.specialPool}</TooltipContent>
+        </Tooltip>
     )
 }
 
@@ -76,12 +87,7 @@ export function PickupPickerBar({
                                         .filter(p => p.quality === q)
                                         .map(p => {
                                             return sample && p.specialPool !== undefined
-                                                ? (
-                                                    <Tooltip>
-                                                        <TooltipTrigger><PickupButton p={p} /></TooltipTrigger>
-                                                        <TooltipContent>{p.specialPool}</TooltipContent>
-                                                    </Tooltip>
-                                                )
+                                                ? <PickupTooltip p={p} />
                                                 : <PickupButton p={p} onPick={onPick} />
                                         })}
                                 </div>
