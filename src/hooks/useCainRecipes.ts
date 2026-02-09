@@ -9,13 +9,13 @@ export function useCainRecipes() {
 
     const addRecipe = () => {
         setRecipes(prev => [
-            ...prev,
             {
                 id: crypto.randomUUID(),
                 itemId: -1,
                 pickups: Array(8).fill(null),
                 createdAt: Date.now(),
             },
+            ...prev
         ])
     }
 

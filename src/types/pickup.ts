@@ -12,4 +12,5 @@ export type Pickup = {
     bg?: string
     index: number
     quality: CainPickupQualities
+    specialPool?: string
 }

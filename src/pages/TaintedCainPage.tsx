@@ -31,17 +31,19 @@ export default function TaintedCainPage() {
             </div>
 
             <div className="grid gap-3 lg:gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
-                {recipes.map(recipe => (
-                    <RecipeCard
-                        key={recipe.id}
-                        recipe={recipe}
-                        items={items}
-                        onChange={patch =>
-                            updateRecipe(recipe.id, patch)
-                        }
-                        onDelete={() => removeRecipe(recipe.id)}
-                    />
-                ))}
+                {recipes
+                    .reverse()
+                    .map(recipe => (
+                        <RecipeCard
+                            key={recipe.id}
+                            recipe={recipe}
+                            items={items}
+                            onChange={patch =>
+                                updateRecipe(recipe.id, patch)
+                            }
+                            onDelete={() => removeRecipe(recipe.id)}
+                        />
+                    ))}
             </div>
 
             <PickupPickerBar

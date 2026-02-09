@@ -2,7 +2,36 @@ import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible"
 import { cn } from "@/lib/utils"
 import { CAIN_Q, Pickup } from "@/types/pickup"
 import { X } from "lucide-react"
+import { CainQualityTable } from "./CainQualityTable"
 import { Button } from "./ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip"
+
+function PickupButton({ p, onPick }: { p: Pickup, onPick?: (p: Pickup) => void }) {
+    return (
+        <Button
+            size="icon-sm"
+            key={p.index}
+            onClick={() => onPick && onPick(p)}
+            className={cn(`
+                        rounded-md
+                        border
+                        hover:bg-muted
+                        flex items-center justify-center
+                      `, (p.specialPool && onPick === undefined) && "bg-blue-800")}
+        >
+            <div
+                className={cn(`w-8 h-8 bg-no-repeat bg-contain`)}
+                style={{
+                    backgroundImage: p.bg ?? "url(/isaac.png)",
+                    backgroundPosition: p.bg
+                        ? undefined
+                        : `-${p.index * 32}px 0px`,
+                    backgroundSize: p.bg ? undefined : "38688px 32px",
+                }}
+            />
+        </Button>
+    )
+}
 
 export function PickupPickerBar({
     open,
@@ -16,6 +45,8 @@ export function PickupPickerBar({
     onClose?: () => void
 }) {
 
+    const sample = onPick === undefined
+
     return (
         <Collapsible open={open}>
             <CollapsibleContent
@@ -27,10 +58,9 @@ export function PickupPickerBar({
           flex-col
           mx-auto
           rounded-t-xl
-        "
-            >
+        ">
 
-                <div className="px-3 pb-3 max-h-[40vh] overflow-auto flex flex-col">
+                <div className="px-3 pb-3 max-h-[70vh] overflow-auto flex flex-col">
                     <Button variant="ghost" size="icon" onClick={onClose} className="self-end sticky top-2">
                         <X />
                     </Button>
@@ -44,34 +74,27 @@ export function PickupPickerBar({
                                 <div className="flex flex-wrap gap-1">
                                     {pickups
                                         .filter(p => p.quality === q)
-                                        .map(p => (
-                                            <Button
-                                                size="icon-sm"
-                                                key={p.index}
-                                                onClick={() => onPick && onPick(p)}
-                                                className="
-                        rounded-md
-                        border
-                        hover:bg-muted
-                        flex items-center justify-center
-                      "
-                                            >
-                                                <div
-                                                    className={cn(`w-8 h-8 bg-no-repeat bg-contain`)}
-                                                    style={{
-                                                        backgroundImage: p.bg ?? "url(/isaac.png)",
-                                                        backgroundPosition: p.bg
-                                                            ? undefined
-                                                            : `-${p.index * 32}px 0px`,
-                                                        backgroundSize: p.bg ? undefined : "38688px 32px",
-                                                    }}
-                                                />
-                                            </Button>
-                                        ))}
+                                        .map(p => {
+                                            return sample && p.specialPool !== undefined
+                                                ? (
+                                                    <Tooltip>
+                                                        <TooltipTrigger><PickupButton p={p} /></TooltipTrigger>
+                                                        <TooltipContent>{p.specialPool}</TooltipContent>
+                                                    </Tooltip>
+                                                )
+                                                : <PickupButton p={p} onPick={onPick} />
+                                        })}
                                 </div>
                             </div>
                         ))}
                     </div>
+                    {
+                        sample && (
+                            <div className="mt-3">
+                                <CainQualityTable />
+                            </div>
+                        )
+                    }
                 </div>
             </CollapsibleContent>
         </Collapsible>
