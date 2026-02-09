@@ -9,6 +9,7 @@ import { useEffect, useState } from "react"
 import { ItemSelect } from "./ItemSelect"
 import { PickupGrid } from "./PickupGrid"
 import { PickupPickerBar } from "./PickupPickerBar"
+import { Badge } from "./ui/badge"
 
 
 interface Props {
@@ -18,6 +19,8 @@ interface Props {
     onDelete: () => void
 }
 
+const getPickupItem = (index: number) => ALL_PICKUPS.find(_ => _.index === index)
+
 export function RecipeCard({
     recipe,
     items,
@@ -25,13 +28,27 @@ export function RecipeCard({
     onDelete,
 }: Props) {
     const [pickerOpen, setPickerOpen] = useState(false)
+    const [sum, setSum] = useState(0);
+    const [pools, setPools] = useState("")
     const pickups = recipe.pickups
 
     useEffect(() => {
         if (pickups.every(p => p !== null)) {
             setPickerOpen(false)
         }
+
+        const total = pickups
+            .map(p => (p === null ? null : getPickupItem(p)))
+            .reduce((sum, pickup) => sum + (pickup?.quality ?? 0), 0)
+
+        const pools = pickups
+            .map(p => (p === null ? null : getPickupItem(p)))
+            .reduce((pool, pickup) => pool + (pickup?.specialPool ?? ""), "")
+
+        setSum(total)
+        setPools(pools)
     }, [pickups])
+
 
 
     const addPickup = (p: Pickup) => {
@@ -44,8 +61,6 @@ export function RecipeCard({
         onChange({ pickups: next })
     }
 
-
-
     const selectedItem =
         recipe.itemId >= 0
             ? items.find(i => i.index === recipe.itemId) ?? null
@@ -57,14 +72,20 @@ export function RecipeCard({
                 className={cn("flex flex-row gap-3 items-start justify-between rounded-lg border border-border transition-all p-3 bg-accent", pickerOpen && "bg-background")}
             >
 
-                <div className="flex flex-col items-center justify-between gap-2">
-                    <ItemSelect
-                        items={items}
-                        value={selectedItem}
-                        onSelect={(item: Entity) =>
-                            onChange({ itemId: item.index })
+                <div className="flex flex-col items-start justify-between gap-2">
+                    <div className="relative">
+                        <ItemSelect
+                            items={items}
+                            value={selectedItem}
+                            onSelect={(item: Entity) =>
+                                onChange({ itemId: item.index })
+                            }
+                        />
+                        {
+                            sum > 0 && <Badge className="absolute bottom-0 -right-2 w-5 h-5 text-[10px] bg-accent" variant="outline">{sum}</Badge>
                         }
-                    />
+                    </div>
+
 
                     <Button
                         variant="ghost"

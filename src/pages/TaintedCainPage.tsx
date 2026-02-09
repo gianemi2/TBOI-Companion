@@ -32,7 +32,6 @@ export default function TaintedCainPage() {
 
             <div className="grid gap-3 lg:gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
                 {recipes
-                    .reverse()
                     .map(recipe => (
                         <RecipeCard
                             key={recipe.id}

@@ -39,7 +39,7 @@ function PickupTooltip({ p }: { p: Pickup }) {
     return (
         <Tooltip open={open} onOpenChange={setOpen}>
             <TooltipTrigger><PickupButton p={p} onOpenTooltip={setOpen} /></TooltipTrigger>
-            <TooltipContent>{p.specialPool}</TooltipContent>
+            <TooltipContent>{p.specialPool} {p.specialPoolHint}</TooltipContent>
         </Tooltip>
     )
 }

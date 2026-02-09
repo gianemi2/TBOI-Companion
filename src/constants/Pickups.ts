@@ -160,7 +160,8 @@ export const ALL_PICKUPS: Pickup[] = [
         index: 948,
         name: "Rune",
         quality: 4,
-        specialPool: "Planetarium (No bombs, keys, pennies or red hearts in the bag)"
+        specialPool: "Planetarium",
+        specialPoolHint: "(No bombs, keys, pennies or red hearts in the bag)"
     },
     {
         index: 957,

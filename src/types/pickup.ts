@@ -13,4 +13,5 @@ export type Pickup = {
     index: number
     quality: CainPickupQualities
     specialPool?: string
+    specialPoolHint?: string
 }
