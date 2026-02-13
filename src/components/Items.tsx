@@ -132,16 +132,6 @@ export function Items() {
                             onChange={setPoolFilter}
                         />
 
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => setShowAdvancedFilters(v => !v)}
-                            title="Filtri avanzati"
-                            className={cn(showAdvancedFilters && "bg-input/40")}
-                        >
-                            <SlidersHorizontal className="w-4 h-4" />
-                        </Button>
-
                         <Tooltip open={unlockTooltipOpen} onOpenChange={setUnlockTooltipOpen} >
                             <TooltipTrigger>
                                 <Button
@@ -163,6 +153,16 @@ export function Items() {
                                 {getUnlockInfo().text}
                             </TooltipContent>
                         </Tooltip>
+
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => setShowAdvancedFilters(v => !v)}
+                            title="Filtri avanzati"
+                            className={cn(showAdvancedFilters && "bg-input/40")}
+                        >
+                            <SlidersHorizontal className="w-4 h-4" />
+                        </Button>
 
                         <Button
                             variant="ghost"
