@@ -693,6 +693,24 @@
         "items": 988,
         "title": "Wild Card",
         "unlock": "Defeat Mega Satan with Tainted Eden"
+      },
+      {
+        "title": "Fool's Gold Rock",
+        "unlock": "Defeat Mega Satan with Tainted Lilith"
+      },
+      {
+        "title": "Wooden Chest",
+        "unlock": "Defeat Mega Satan with Tainted Lazarus"
+      },
+      {
+        "items": 970,
+        "title": "The Lovers?",
+        "unlock": "Defeat Ultra Greedier with Tainted Magdalene"
+      },
+      {
+        "items": 968,
+        "title": "The Emperor?",
+        "unlock": "Defeat Ultra Greedier with Tainted ???"
       }
     ]
   },

@@ -5,6 +5,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog"
+import { APP_VERSION } from "@/constants/AppVersion"
 import { getWikiUrl } from "@/lib/getWikiUrl"
 import { Entity } from "@/types/entity"
 import type { Item } from "@/types/item"
@@ -32,7 +33,7 @@ export function EntityDialog({ entity, onClose }: Props) {
                                         backgroundSize: `${entity.bg ? "contain" : "38688px 32px"}`
                                     }}
                                 />
-                                {entity.name}
+                                {entity.name} {APP_VERSION === "dev" && entity.index}
                                 {
                                     (entity.kind !== "misc" && typeof entity.quality === "number") && (
                                         <div className="flex gap-1 items-center">
