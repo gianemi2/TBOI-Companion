@@ -221,12 +221,14 @@ export function Items() {
                     entities={filtered.trinkets}
                     title="Trinkets"
                     onSelectItem={handleSelectItem}
+                    unlockMode={unlockMode}
                 />
 
                 <EntityList
                     entities={filtered.consumables}
                     title="Consumables"
                     onSelectItem={handleSelectItem}
+                    unlockMode={unlockMode}
                 />
             </PageContainer >
 
