@@ -7,11 +7,15 @@ import {
     CollapsibleContent
 } from "@/components/ui/collapsible"
 import type { PoolFilter } from "@/constants/pools"
+import { useUnlockedItems } from "@/hooks/useUnlockedItems"
 import { getCachedItems } from "@/lib/fetchItems"
 import { cn } from "@/lib/utils"
 import { Entity } from "@/types/entity"
 import { filterItems } from "@/utils/filterItems"
-import { SlidersHorizontal, X } from "lucide-react"
+import { Eye, EyeClosed, HatGlasses, SlidersHorizontal, X } from "lucide-react"
+
+import { useLocalStorage } from "@/hooks/useLocalStorage"
+import { UnlockFilterMode } from "@/types/unlockFilterMode"
 import { useCallback, useEffect, useMemo, useState } from "react"
 import { EntityDialog } from "./EntityDialog"
 import { EntityList } from "./EntityList"
@@ -20,8 +24,7 @@ import { InputGroup, InputGroupAddon, InputGroupInput } from "./ui/input-group"
 import { PageContainer } from "./ui/page-container"
 import { SearchContainer } from "./ui/search-container"
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group"
-
-type Quality = 0 | 1 | 2 | 3 | 4
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip"
 
 export function Items() {
 
@@ -37,9 +40,44 @@ export function Items() {
     const [poolFilter, setPoolFilter] = useState<PoolFilter>("all")
     const [selectedItem, setSelectedItem] = useState<Entity | null>(null)
     const [showAdvancedFilters, setShowAdvancedFilters] = useState(false)
-
+    const [unlockMode, setUnlockMode] = useLocalStorage<UnlockFilterMode>("unlock-mode", "all")
 
     const [selectedQualities, setSelectedQualities] = useState<string[]>([])
+    const [showUnlockedOnly, setShowUnlockedOnly] = useState(false)
+    const [unlockTooltipOpen, setUnlockTooltipOpen] = useState(false);
+    const { unlockedSet } = useUnlockedItems()
+
+    const getUnlockInfo = () => {
+        switch (unlockMode) {
+            case "all":
+                return {
+                    icon: <Eye className="w-4 h-4" />,
+                    text: "Tutti gli oggetti"
+                }
+            case "unlocked-only":
+                return {
+                    icon: <EyeClosed className="w-4 h-4" />,
+                    text: "Bloccati nascosti"
+                }
+            case "dim-locked":
+                return {
+                    icon: <HatGlasses className="w-4 h-4" />,
+                    text: "Bloccati oscurati"
+                }
+        }
+    }
+
+
+    const cycleUnlockMode = () => {
+        setUnlockMode(prev =>
+            prev === "all"
+                ? "dim-locked"
+                : prev === "dim-locked"
+                    ? "unlocked-only"
+                    : "all"
+        )
+    }
+
 
     useEffect(() => {
         const t = setTimeout(() => setSearch(searchInput), 150);
@@ -48,9 +86,9 @@ export function Items() {
 
     const filtered = useMemo(() => {
         return {
-            items: filterItems(items, search, poolFilter, "items", selectedQualities),
-            trinkets: filterItems(trinkets, search, poolFilter, "trinkets"),
-            consumables: filterItems(consumables, search, poolFilter, "consumables"),
+            items: filterItems(items, search, poolFilter, "items", selectedQualities, unlockMode, unlockedSet),
+            trinkets: filterItems(trinkets, search, poolFilter, "trinkets", undefined, unlockMode, unlockedSet),
+            consumables: filterItems(consumables, search, poolFilter, "consumables", undefined, unlockMode, unlockedSet),
         };
     }, [items, trinkets, consumables, search, poolFilter, selectedQualities]);
 
@@ -104,6 +142,28 @@ export function Items() {
                             <SlidersHorizontal className="w-4 h-4" />
                         </Button>
 
+                        <Tooltip open={unlockTooltipOpen} onOpenChange={setUnlockTooltipOpen} >
+                            <TooltipTrigger>
+                                <Button
+                                    variant="ghost"
+                                    size="icon"
+                                    onClick={() => {
+                                        cycleUnlockMode();
+                                        setUnlockTooltipOpen(true)
+                                    }}
+                                    title="Filtro sbloccati"
+                                    className={cn(
+                                        unlockMode !== "all" && "bg-input/40"
+                                    )}
+                                >
+                                    {getUnlockInfo().icon}
+                                </Button>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                {getUnlockInfo().text}
+                            </TooltipContent>
+                        </Tooltip>
+
                         <Button
                             variant="ghost"
                             size="icon"
@@ -154,6 +214,7 @@ export function Items() {
                     entities={filtered.items}
                     title="Items"
                     onSelectItem={handleSelectItem}
+                    unlockMode={unlockMode}
                 />
 
                 <EntityList

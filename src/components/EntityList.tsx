@@ -1,16 +1,19 @@
 import { Entity } from "@/types/entity"
+import { UnlockFilterMode } from "@/types/unlockFilterMode"
 import { EntityCard } from "./EntityCard"
 
 type EntityListProps = {
     entities: Entity[]
     title: string
     onSelectItem: (entity: Entity) => void
+    unlockMode?: UnlockFilterMode
 }
 
 export const EntityList = ({
     entities,
     title,
-    onSelectItem
+    onSelectItem,
+    unlockMode
 }: EntityListProps) => {
     return (
         <div className="flex flex-col gap-4">
@@ -21,6 +24,7 @@ export const EntityList = ({
                         key={entity.index}
                         entity={entity}
                         onClick={() => onSelectItem(entity)}
+                        unlockMode={unlockMode}
                     />
                 ))}
             </div>

@@ -1,6 +1,7 @@
 // utils/filterItems.ts
 import type { PoolFilter } from "@/constants/pools"
 import type { Item } from "@/types/item"
+import { UnlockFilterMode } from "@/types/unlockFilterMode"
 import { matchesSearch } from "./fullTextSearch"
 
 type ItemsType = "items" | "trinkets" | "consumables"
@@ -10,7 +11,9 @@ export function filterItems(
     search: string,
     poolFilter: PoolFilter,
     itemType: ItemsType,
-    qualityFilter: string[] = []
+    qualityFilter: string[] = [],
+    unlockMode: UnlockFilterMode,
+    unlockedItems: Set<number>
 ): Item[] {
     const poolQ = poolFilter.toLowerCase()
 
@@ -31,6 +34,12 @@ export function filterItems(
                 qualityFilter.includes(item.quality.toString())
             )
 
-        return searchOk && poolOk && qualityOk
+        const unlockedOk =
+            unlockMode === "all" ||
+            unlockMode === "dim-locked" ||
+            unlockedItems.has(item.index)
+
+
+        return searchOk && poolOk && qualityOk && unlockedOk
     })
 }

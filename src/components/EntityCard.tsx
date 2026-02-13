@@ -1,29 +1,61 @@
 // components/EntityCard.tsx
+import { useLongPress } from "@/hooks/useLongPress"
+import { useUnlockedItems } from "@/hooks/useUnlockedItems"
 import { cn } from "@/lib/utils"
 import { Entity } from "@/types/entity"
+import { UnlockFilterMode } from "@/types/unlockFilterMode"
 import React from "react"
 
 interface Props {
     entity: Entity
-    onClick: () => void
+    onClick: () => void,
+    unlockMode?: UnlockFilterMode
 }
 
-export const EntityCard = React.memo(({ entity, onClick }: Props) => {
+export const EntityCard = React.memo(({ entity, onClick, unlockMode }: Props) => {
+    const { toggle, isUnlocked } = useUnlockedItems()
+
+    const { handlers, shouldPreventClick } = useLongPress(() => {
+        toggle(entity.index)
+        if (navigator.vibrate) navigator.vibrate(15)
+    })
+
+
+    const unlocked = !entity.unlock || isUnlocked(entity.index)
+
+    let visualState = "opacity-100"
+
+    if (!unlocked) {
+        if (unlockMode === "dim-locked") {
+            visualState = "opacity-25 grayscale"
+        }
+    }
+
+
     return (
         <button
-            onClick={onClick}
-            className="flex items-center justify-center w-9 h-9"
+            {...handlers}
+            onClick={(e) => {
+                if (shouldPreventClick()) {
+                    e.preventDefault()
+                    return
+                }
+                onClick()
+            }}
+            className={cn("flex items-center justify-center w-9 h-9", (!unlocked && unlockMode === "unlocked-only") && "hidden")}
         >
-            {/* Sprite */}
-
             <div
-                className={cn("w-8 h-8 shrink-0 bg-no-repeat bg-contain", !entity.scale && "scale-125")}
+                className={cn(
+                    "transition-all duration-200 w-8 h-8 shrink-0 bg-no-repeat bg-contain",
+                    !entity.scale && "scale-125",
+                    visualState
+                )}
                 style={{
-                    backgroundImage: `${entity.bg ? entity.bg : "url(/isaac.png)"}`,
-                    backgroundPosition: `${entity.bg || (entity.kind === "misc" && entity.bg) ? "" : `-${entity.index * 32}px 0px`}`,
-                    backgroundSize: `${entity.bg ? "" : "38688px 32px"}`,
-                    willChange: "transform",
-                    transform: `${entity.scale && `scale(${entity.scale})`}`
+                    backgroundImage: entity.bg ?? "url(/isaac.png)",
+                    backgroundPosition: entity.bg
+                        ? undefined
+                        : `-${entity.index * 32}px 0px`,
+                    backgroundSize: entity.bg ? undefined : "38688px 32px",
                 }}
             />
         </button>
