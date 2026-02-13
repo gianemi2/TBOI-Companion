@@ -42,7 +42,9 @@ export const EntityCard = React.memo(({ entity, onClick, unlockMode }: Props) =>
                 }
                 onClick()
             }}
-            className={cn("flex items-center justify-center w-9 h-9", (!unlocked && unlockMode === "unlocked-only") && "hidden")}
+            onContextMenu={(e) => e.preventDefault()}
+            style={{ WebkitTouchCallout: "none" }}
+            className={cn("flex items-center justify-center select-none w-9 h-9", (!unlocked && unlockMode === "unlocked-only") && "hidden")}
         >
             <div
                 className={cn(
