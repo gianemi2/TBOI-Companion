@@ -15,7 +15,7 @@ interface Props {
 export const EntityCard = React.memo(({ entity, onClick, unlockMode }: Props) => {
     const { toggle, isUnlocked } = useUnlockedItems()
 
-    const { handlers, shouldPreventClick } = useLongPress(() => {
+    const { handlers, shouldPreventClick, pressing } = useLongPress(() => {
         toggle(entity.index)
         if (navigator.vibrate) navigator.vibrate(15)
     })
@@ -43,14 +43,29 @@ export const EntityCard = React.memo(({ entity, onClick, unlockMode }: Props) =>
                 onClick()
             }}
             onContextMenu={(e) => e.preventDefault()}
-            style={{ WebkitTouchCallout: "none" }}
-            className={cn("flex items-center justify-center select-none w-9 h-9", (!unlocked && unlockMode === "unlocked-only") && "hidden")}
+            onTouchStart={(e) => {
+                e.preventDefault()
+                handlers.onTouchStart?.()
+            }}
+            className={cn(`flex items-center justify-center w-9 h-9
+             select-none
+             outline-none focus:outline-none
+
+             active:scale-95`, (!unlocked && unlockMode === "unlocked-only") && "hidden")}
+            style={{
+                WebkitTouchCallout: "none",
+                WebkitUserSelect: "none",
+                touchAction: "manipulation",
+                WebkitTapHighlightColor: "transparent"
+            }}
+
         >
             <div
                 className={cn(
                     "transition-all duration-200 w-8 h-8 shrink-0 bg-no-repeat bg-contain",
                     !entity.scale && "scale-125",
-                    visualState
+                    visualState,
+                    pressing && "scale-95 opacity-70",
                 )}
                 style={{
                     backgroundImage: entity.bg ?? "url(/isaac.png)",

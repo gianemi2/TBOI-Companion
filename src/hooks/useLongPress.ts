@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 export function useLongPress(
     callback: () => void,
@@ -6,13 +6,16 @@ export function useLongPress(
 ) {
     const timerRef = useRef<NodeJS.Timeout | null>(null)
     const longPressTriggered = useRef(false)
+    const [pressing, setPressing] = useState(false)
 
     const start = () => {
         longPressTriggered.current = false
+        setPressing(true)
 
         timerRef.current = setTimeout(() => {
             callback()
             longPressTriggered.current = true
+            setPressing(false)
         }, delay)
     }
 
@@ -21,11 +24,10 @@ export function useLongPress(
             clearTimeout(timerRef.current)
             timerRef.current = null
         }
+        setPressing(false)
     }
 
-    const shouldPreventClick = () => {
-        return longPressTriggered.current
-    }
+    const shouldPreventClick = () => longPressTriggered.current
 
     return {
         handlers: {
@@ -36,5 +38,6 @@ export function useLongPress(
             onTouchEnd: clear,
         },
         shouldPreventClick,
+        pressing,
     }
 }
