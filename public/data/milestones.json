@@ -711,6 +711,16 @@
         "items": 968,
         "title": "The Emperor?",
         "unlock": "Defeat Ultra Greedier with Tainted ???"
+      },
+      {
+        "items": 660,
+        "title": "Candy Heart",
+        "unlock": "Defeat The Beast with Magdalene"
+      },
+      {
+        "items": 894,
+        "title": "Strange Key",
+        "unlock": "Defeat Isaac, ???, Satan and The Lamb with Tainted Eve"
       }
     ]
   },

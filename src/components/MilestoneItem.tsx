@@ -50,6 +50,8 @@ export default function MilestoneItem({ id, milestone, isDone, onToggle, onSelec
 
                 {milestone.description && <SpoilerText text={milestone.description} />}
 
+                {!milestone.description && milestoneItems.map(item => <SpoilerText text={item.description} />)}
+
 
 
             </div>
