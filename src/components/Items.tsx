@@ -43,7 +43,6 @@ export function Items() {
     const [unlockMode, setUnlockMode] = useLocalStorage<UnlockFilterMode>("unlock-mode", "all")
 
     const [selectedQualities, setSelectedQualities] = useState<string[]>([])
-    const [showUnlockedOnly, setShowUnlockedOnly] = useState(false)
     const [unlockTooltipOpen, setUnlockTooltipOpen] = useState(false);
     const { unlocked } = useUnlockedItems()
 
@@ -101,7 +100,16 @@ export function Items() {
             trinkets: filterItems(trinkets, search, poolFilter, "trinkets", undefined, unlockMode, unlockedSet),
             consumables: filterItems(consumables, search, poolFilter, "consumables", undefined, unlockMode, unlockedSet),
         };
-    }, [items, trinkets, consumables, search, poolFilter, selectedQualities]);
+    }, [
+        items,
+        trinkets,
+        consumables,
+        search,
+        poolFilter,
+        selectedQualities,
+        unlockMode,
+        unlocked
+    ]);
 
     const handleSelectItem = useCallback((entity: Entity | null) => {
         setSelectedItem(entity);

@@ -41,6 +41,7 @@ export default function MilestoneItem({ id, milestone, isDone, onToggle, onSelec
                     <SpoilerText text={milestone.title} className='text-base'></SpoilerText>
 
                     {milestoneItems.map((item: Item) => <EntityCard
+                        key={item.index}
                         entity={item}
                         onClick={() => onSelectItem(item)}
                     />)}
@@ -50,7 +51,7 @@ export default function MilestoneItem({ id, milestone, isDone, onToggle, onSelec
 
                 {milestone.description && <SpoilerText text={milestone.description} />}
 
-                {!milestone.description && milestoneItems.map(item => <SpoilerText text={item.description} />)}
+                {!milestone.description && milestoneItems.map((item, index) => <SpoilerText key={`${item.index}-${index}`} text={item.description} />)}
 
 
 

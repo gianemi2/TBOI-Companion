@@ -99,6 +99,7 @@ export function MilestoneChecklist({ sections }: Props) {
                                 const id = `${section.milestoneTitle}-${m.title}`
                                 const isDone = completed[id]
 
+
                                 return (
                                     <MilestoneItem
                                         key={id}
