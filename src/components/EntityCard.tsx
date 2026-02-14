@@ -1,7 +1,7 @@
 // components/EntityCard.tsx
 import { useLongPress } from "@/hooks/useLongPress"
-import { useUnlockedItems } from "@/hooks/useUnlockedItems"
 import { cn } from "@/lib/utils"
+import { useUnlockedItems } from "@/providers/UnlockedContext"
 import { Entity } from "@/types/entity"
 import { UnlockFilterMode } from "@/types/unlockFilterMode"
 import React from "react"
@@ -26,7 +26,7 @@ export const EntityCard = React.memo(({ entity, onClick, unlockMode }: Props) =>
     let visualState = "opacity-100"
 
     if (!unlocked) {
-        if (unlockMode === "dim-locked") {
+        if (unlockMode === "dim-locked" || unlockMode === undefined) {
             visualState = "opacity-25 grayscale"
         }
     }

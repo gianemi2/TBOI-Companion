@@ -7,7 +7,6 @@ import {
     CollapsibleContent
 } from "@/components/ui/collapsible"
 import type { PoolFilter } from "@/constants/pools"
-import { useUnlockedItems } from "@/hooks/useUnlockedItems"
 import { getCachedItems } from "@/lib/fetchItems"
 import { cn } from "@/lib/utils"
 import { Entity } from "@/types/entity"
@@ -15,6 +14,7 @@ import { filterItems } from "@/utils/filterItems"
 import { Eye, EyeClosed, HatGlasses, SlidersHorizontal, X } from "lucide-react"
 
 import { useLocalStorage } from "@/hooks/useLocalStorage"
+import { useUnlockedItems } from "@/providers/UnlockedContext"
 import { UnlockFilterMode } from "@/types/unlockFilterMode"
 import { useCallback, useEffect, useMemo, useState } from "react"
 import { EntityDialog } from "./EntityDialog"
@@ -45,7 +45,7 @@ export function Items() {
     const [selectedQualities, setSelectedQualities] = useState<string[]>([])
     const [showUnlockedOnly, setShowUnlockedOnly] = useState(false)
     const [unlockTooltipOpen, setUnlockTooltipOpen] = useState(false);
-    const { unlockedSet } = useUnlockedItems()
+    const { unlocked } = useUnlockedItems()
 
     const getUnlockInfo = () => {
         switch (unlockMode) {
@@ -85,6 +85,7 @@ export function Items() {
     }, [searchInput]);
 
     const filtered = useMemo(() => {
+        const unlockedSet = new Set(unlocked)
         return {
             items: filterItems(items, search, poolFilter, "items", selectedQualities, unlockMode, unlockedSet),
             trinkets: filterItems(trinkets, search, poolFilter, "trinkets", undefined, unlockMode, unlockedSet),
@@ -133,7 +134,7 @@ export function Items() {
                         />
 
                         <Tooltip open={unlockTooltipOpen} onOpenChange={setUnlockTooltipOpen} >
-                            <TooltipTrigger>
+                            <TooltipTrigger asChild>
                                 <Button
                                     variant="ghost"
                                     size="icon"
