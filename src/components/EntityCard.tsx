@@ -31,6 +31,11 @@ export const EntityCard = React.memo(({ entity, onClick, unlockMode }: Props) =>
         }
     }
 
+    const hidden =
+        (unlockMode === "unlocked-only" && !unlocked) ||
+        (unlockMode === "locked-only" && unlocked)
+
+
 
     return (
         <button
@@ -51,7 +56,7 @@ export const EntityCard = React.memo(({ entity, onClick, unlockMode }: Props) =>
              select-none
              outline-none focus:outline-none
 
-             active:scale-95`, (!unlocked && unlockMode === "unlocked-only") && "hidden")}
+             active:scale-95`, hidden && "hidden")}
             style={{
                 WebkitTouchCallout: "none",
                 WebkitUserSelect: "none",

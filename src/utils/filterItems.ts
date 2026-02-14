@@ -34,12 +34,27 @@ export function filterItems(
                 qualityFilter.includes(item.quality.toString())
             )
 
-        const unlockedOk =
-            unlockMode === "all" ||
-            unlockMode === "dim-locked" ||
-            unlockedItems.has(item.index)
+        let unlockOk = true
+
+        const isUnlocked = !item.unlock || unlockedItems.has(item.index)
+
+        switch (unlockMode) {
+            case "all":
+            case "dim-locked":
+                unlockOk = true
+                break
+
+            case "unlocked-only":
+                unlockOk = isUnlocked
+                break
+
+            case "locked-only":
+                unlockOk = !isUnlocked
+                break
+        }
 
 
-        return searchOk && poolOk && qualityOk && unlockedOk
+
+        return searchOk && poolOk && qualityOk && unlockOk
     })
 }

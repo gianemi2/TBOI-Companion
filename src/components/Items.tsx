@@ -11,7 +11,7 @@ import { getCachedItems } from "@/lib/fetchItems"
 import { cn } from "@/lib/utils"
 import { Entity } from "@/types/entity"
 import { filterItems } from "@/utils/filterItems"
-import { Eye, EyeClosed, HatGlasses, SlidersHorizontal, X } from "lucide-react"
+import { Eye, EyeClosed, HatGlasses, ScanEye, SlidersHorizontal, X } from "lucide-react"
 
 import { useLocalStorage } from "@/hooks/useLocalStorage"
 import { useUnlockedItems } from "@/providers/UnlockedContext"
@@ -64,18 +64,28 @@ export function Items() {
                     icon: <HatGlasses className="w-4 h-4" />,
                     text: "Bloccati oscurati"
                 }
+            case "locked-only":
+                return {
+                    icon: <ScanEye className="w-4 h-4" />,
+                    text: "Solo bloccati"
+                }
         }
     }
 
 
     const cycleUnlockMode = () => {
-        setUnlockMode(prev =>
-            prev === "all"
-                ? "dim-locked"
-                : prev === "dim-locked"
-                    ? "unlocked-only"
-                    : "all"
-        )
+        setUnlockMode(prev => {
+            switch (prev) {
+                case "all":
+                    return "dim-locked"
+                case "dim-locked":
+                    return "unlocked-only"
+                case "unlocked-only":
+                    return "locked-only"
+                case "locked-only":
+                    return "all"
+            }
+        })
     }
 
 
