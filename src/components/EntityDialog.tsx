@@ -10,6 +10,7 @@ import { getWikiUrl } from "@/lib/getWikiUrl"
 import { Entity } from "@/types/entity"
 import type { Item } from "@/types/item"
 import { Star } from "lucide-react"
+import { SpindownDice } from "./SpindownDice"
 import { Button } from "./ui/button"
 
 interface Props {
@@ -73,6 +74,8 @@ export function EntityDialog({ entity, onClose }: Props) {
                                     </>
                                 )
                             }
+
+                            {entity.kind === "item" && <SpindownDice item={entity} />}
 
                             {entity.unlock && <p className="mt-4 text-xs text-muted-foreground">{entity.unlock}</p>}
 
