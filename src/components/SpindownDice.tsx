@@ -6,7 +6,7 @@ interface Props {
     item: Item
 }
 
-function getNearbyIds(id: number, items: Item[], range = 10) {
+function getNearbyIds(id: number, items: Item[], range = 8) {
     const prev = [];
     const next = [];
 
@@ -27,9 +27,9 @@ export const SpindownDice = ({ item }: Props) => {
     const { items } = data;
     const { prev, next } = useMemo(() => getNearbyIds(item.index, items), [item])
     return (
-        <div className='flex gap-2 flex-col'>
+        <div className='flex gap-2 flex-col overflow-x-scroll'>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 overflow-x-auto ">
                 {(next && next.length > 0) && next.map(nextItem => {
                     if (!nextItem)
                         return
@@ -55,7 +55,7 @@ export const SpindownDice = ({ item }: Props) => {
                 }
                 }
             />
-            <div className="flex gap-2">
+            <div className="flex gap-2 overflow-x-scroll flex-nowrap">
                 {(prev && prev.length > 0) && prev.map(prevItem => {
                     if (!prevItem)
                         return;

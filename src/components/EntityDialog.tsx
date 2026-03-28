@@ -21,7 +21,7 @@ interface Props {
 export function EntityDialog({ entity, onClose }: Props) {
     return (
         <Dialog open={!!entity} onOpenChange={() => onClose(null)}>
-            <DialogContent className="max-w-lg w-[95%] max-h-[80vh] overflow-auto">
+            <DialogContent className="max-w-lg w-[95%] max-h-[80vh] overflow-y-auto flex flex-col">
                 {entity && (
                     <>
                         <DialogHeader>
